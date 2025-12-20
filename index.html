@@ -214,42 +214,75 @@
 	    <p style="line-height: 1.6;">"Our mission is to enhance the physical and mental well-being of our patients through ancestral indigenous medical secrets and pure Ayurvedic treatments, while ensuring a healthy life by providing high-quality medical services and premium herbal medicines.".</p>
         </div>
     </div>
-   <h4 style="text-align: center; color: #1e5631; margin-top: 40px; margin-bottom: 25px; font-size: 1.6em;">අපගේ ප්‍රධාන වෛද්‍යවරු | Our Chief Physicians</h4>
+  <h4 style="text-align: center; color: #1e5631; margin-top: 40px; margin-bottom: 25px; font-size: 1.6em;">අපගේ ප්‍රධාන වෛද්‍යවරු | Our Chief Physicians</h4>
+
+<style>
+    /* වෛද්‍යවරුන්ගේ Card එක සඳහා අලුත් Style */
+    .dr-profile-container {
+        display: flex;
+        flex-wrap: wrap; /* Phone එකේදී යටට යාමට */
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 40px;
+        padding: 20px;
+        background: #fdfaf0;
+        border-radius: 15px;
+        border-left: 5px solid #daa520;
+    }
+    .dr-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid #daa520;
+        object-fit: cover;
+        flex-shrink: 0; /* පින්තූරය කුඩා වීම වැළැක්වීමට */
+    }
+    .dr-info {
+        flex: 1;
+        min-width: 280px; /* Phone එකේදී මීට වඩා අඩු වුවහොත් යටට යයි */
+    }
     
-    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px; text-align: left;">
-           
-	 	<img src="dr_somarathna.jpg" alt="Dr. P. Somarathna" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #daa520; object-fit: cover;">
-        
-		<div style="flex: 1; min-width: 250px;">
-            	<p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය පී. සොමරත්න (Dr. P. Somarathna)</p>
-            	<p style="margin: 5px 0;">තම පරම්පරාවේ පුස්කොලපොත් සහ තම පරපුරේ වෙද සෘෂිවරැන්ගෙන් ලබාගත්  දැනුමින් සර්වාංග රෝග පිළිබඳ පුහුණුව ලත් පාරම්පරික වෛද්‍යවරයෙකි. වසර 15 කට වැඩි අත්දැකීම් සහිත, භූත විද්‍යාව පිළිබඳ හසල දැනුමක් ඇති ඉසිවරයෙකි.</p>
-            	<p style="margin: 5px 0;"> He is a traditional physician trained in all kinds of diseases, with the knowledge he has acquired from the books of his generation and the medical sages of his generation. He is a healer with over 15 years of experience and a profound knowledge of demonology.</p>
-  	    </div>
-     	</div> 
+    /* Phone එක සඳහා විශේෂයෙන් */
+    @media (max-width: 600px) {
+        .dr-profile-container {
+            flex-direction: column; /* පින්තූරය උඩට සහ විස්තරය යටට */
+            text-align: center;
+        }
+        .dr-image {
+            width: 130px;
+            height: 130px;
+        }
+    }
+</style>
 
-    	<div style="display: flex; align-items: center; gap: 20px; text-align: left; margin-top: 50px;">
-        
-		<img src="dr_mangalikherath.jpg" alt="Dr. Mangalika Herath" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #daa520; object-fit: cover;">
-       
-		<div style="flex: 1; min-width: 250px;">
-            	    <p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය එච්.එම්. මංගලිකා හේරත් (Dr. Mangalika Herath)</p>
-            	    <p style="margin: 5px 0;">**සර්වාංග රෝග පිළිබඳ පුහුණුව** සහ **ආයුර්වේද හා කේරල පංචකර්ම** පිළිබඳ සුවිශේෂී දැනුමක් සහිත පළපුරුදු දේශීය වෛද්‍යවරියකි. දේශීය හා විදේශීය පුහුණුව ලැබූ එතුමිය, සාම්ප්‍රදායික ආයුර්වේද ක්‍රමවේදයන් යොදා ගනිමින් සාර්ථක ප්‍රතිකාර ලබා දීම පිළිබඳව ප්‍රසිද්ධය. වසර කිහිපයක්ම උතුරැමැද පළාතේ හොදම පරිසර නිළධාරිණිය ලෙසින් සම්මානයට පාත්‍ර වූ පරිසර වේදිනියෙකි .</p>
+<div class="dr-profile-container">
+    <img src="dr_somarathna.jpg" alt="Dr. P. Somarathna" class="dr-image">
+    <div class="dr-info">
+        <p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය පී. සොමරත්න (Dr. P. Somarathna)</p>
+        <p style="margin: 5px 0;">තම පරම්පරාවේ පුස්කොලපොත් සහ තම පරපුරේ වෙද සෘෂිවරැන්ගෙන් ලබාගත්  දැනුමින් සර්වාංග රෝග පිළිබඳ පුහුණුව ලත් පාරම්පරික වෛද්‍යවරයෙකි. වසර 15 කට වැඩි අත්දැකීම් සහිත, භූත විද්‍යාව පිළිබඳ හසල දැනුමක් ඇති ඉසිවරයෙකි.</p>
+        <p style="margin: 5px 0;"> He is a traditional physician trained in all kinds of diseases, with the knowledge he has acquired from the books of his generation and the medical sages of his generation. He is a healer with over 15 years of experience and a profound knowledge of demonology.</p>
+
+    </div>
+</div>
+
+<div class="dr-profile-container">
+    <img src="dr_mangalikherath.jpg" alt="Dr. Mangalika Herath" class="dr-image">
+    <div class="dr-info">
+        <p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය එච්.එම්. මංගලිකා හේරත් (Dr. Mangalika Herath)</p>
+        <p style="margin: 5px 0;">**සර්වාංග රෝග පිළිබඳ පුහුණුව** සහ **ආයුර්වේද හා කේරල පංචකර්ම** පිළිබඳ සුවිශේෂී දැනුමක් සහිත පළපුරුදු දේශීය වෛද්‍යවරියකි. දේශීය හා විදේශීය පුහුණුව ලැබූ එතුමිය, සාම්ප්‍රදායික ආයුර්වේද ක්‍රමවේදයන් යොදා ගනිමින් සාර්ථක ප්‍රතිකාර ලබා දීම පිළිබඳව ප්‍රසිද්ධය. වසර කිහිපයක්ම උතුරැමැද පළාතේ හොදම පරිසර නිළධාරිණිය ලෙසින් සම්මානයට පාත්‍ර වූ පරිසර වේදිනියෙකි .</p>
            	    <p style="margin: 5px 0;">"She is an experienced indigenous physician with specialized training in general medicine (Sarvanga Roga) and exceptional knowledge of Ayurveda and Kerala Panchakarma. Having received both local and international training, she is well-known for providing successful treatments using traditional Ayurvedic methodologies. Furthermore, she is an environmentalist who has been honored as the best environmental officer in the North Central Province for several consecutive years."</p>
-	        </div>
+    </div>
+</div>
 
-	       </div>
-
-		<div style="display: flex; align-items: center; gap: 20px; text-align: left; margin-top: 50px;">
-		
-		<img src="dr_thilakarathna.jpg" alt="Dr. Gamini Thilakarathna" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #daa520; object-fit: cover;">
-        	
-		<div style="flex: 1; min-width: 250px;">
-            	    <p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය ශිෂ්‍ය එච්.එම්. ගාමිණී තිලකරත්න  ( H.M. Gamini Thilakarathna (Doctor Student))</p>
-            	    <p style="margin: 5px 0;">ඉහත වෛද්‍යවරැන්ගෙන් නිසි දැනුම ලබා ගනිමින් කුරැණෑගල ආයුර්වේද වෛද්‍ය විද්‍යලයේ පුහුණුව ලබන වෛද්‍ය ශිෂ්‍යකෙි. SMC APTI Ayurveda Panchakarma & Spa Therapy පාඨමාලාව හදාරා ඇත. ආයුර්වේද අවුෂධ නිෂ්පාදනාගාර කිහිපයක රැකියාව කිරීම තුලින් අවුෂධ වර්ග සහ අවුෂධ නිෂ්පාදනය පිළිබද විශේෂ දැනුමක් ලබා ඇත.</p>
- 	    	    <p style="margin: 5px 0;">"he is a medical student currently undergoing training at the Kurunegala Ayurvedic Medical College, gaining profound knowledge under the guidance of the aforementioned physicians. he have successfully completed the SMC APTI Ayurveda Panchakarma & Spa Therapy course. Furthermore, through his professional experience at several Ayurvedic pharmaceutical manufacturing plants, he have acquired specialized knowledge in medicinal herbs and the production of Ayurvedic medicines."</p>       
-	     </div>
-    	</div>
-   
+<div class="dr-profile-container">
+    <img src="dr_thilakarathna.jpg" alt="Dr. Gamini Thilakarathna" class="dr-image">
+    <div class="dr-info">
+        <p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය ශිෂ්‍ය එච්.එම්. ගාමිණී තිලකරත්න (H.M. Gamini Thilakarathna)</p>
+        <p style="margin: 5px 0;">ඉහත වෛද්‍යවරැන්ගෙන් නිසි දැනුම ලබා ගනිමින් කුරැණෑගල ආයුර්වේද වෛද්‍ය විද්‍යලයේ පුහුණුව ලබන වෛද්‍ය ශිෂ්‍යකෙි. SMC APTI Ayurveda Panchakarma & Spa Therapy පාඨමාලාව හදාරා ඇත. ආයුර්වේද අවුෂධ නිෂ්පාදනාගාර කිහිපයක රැකියාව කිරීම තුලින් අවුෂධ වර්ග සහ අවුෂධ නිෂ්පාදනය පිළිබද විශේෂ දැනුමක් ලබා ඇත. සංධ් වේදනා සුව කිරීම සම්බන්ධයෙන්  නිකවැරටිය ප්‍රදේශයේ විශේෂ ප්‍රසිද්ධියක් ලබා ඇත.</p>
+ 	    	    <p style="margin: 5px 0;">"he is a medical student currently undergoing training at the Kurunegala Ayurvedic Medical College, gaining profound knowledge under the guidance of the aforementioned physicians. he have successfully completed the SMC APTI Ayurveda Panchakarma & Spa Therapy course. Furthermore, through his professional experience at several Ayurvedic pharmaceutical manufacturing plants, he have acquired specialized knowledge in medicinal herbs and the production of Ayurvedic medicines."</p>
+    </div>
+</div>
+  
      </section> <div class="treatment-cta">
     <h2>දිවියට සුවයක්</h2>
     <p>ආයුර්වේද ප්‍රතිකාර ක්‍රමවේදයන් පිළිබඳ වැඩි විස්තර මෙතැනින් ලබාගන්න.</p>
