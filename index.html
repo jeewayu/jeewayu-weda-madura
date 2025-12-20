@@ -6,177 +6,164 @@
     <title>ජීවායු වෙද මැදුර | Jeevayu Weda Madura</title>
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #1e5631; --accent: #1e5631; --bg: #f4f7f4; }
+	    :root { --primary: #1e5631; --accent: #1e5631; --bg: #f4f7f4; }
         body { font-family: 'Abhaya Libre', serif; margin: 0; background-color: var(--bg); color: #333; scroll-behavior: smooth; }
-        
+
         header {
             background: linear-gradient(rgba(30, 86, 49, 0.8), rgba(30, 86, 49, 0.8)), url('ayurveda_bg.jpg');
             background-size: cover; background-position: center; background-attachment: fixed;
             color: white; padding: 100px 20px; text-align: center;
         }
         .logo-container img { width: 130px; border-radius: 50%; border: 4px solid var(--accent); margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-        
         nav { background: var(--primary); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; font-family: 'Poppins', sans-serif; transition: 0.3s; }
         nav a:hover { color: var(--accent); }
-        
-.treatment-cta {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: #87CEEB !important;
-    border-radius: 15px;
-    margin: 30px auto;
-    max-width: 700px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border: 1.5px solid #1e5631;
-}
 
-.treatment-cta h2 {
-    font-size: 1.8em;
-    color: #1e5631 !important; 
-    font-weight: bold;
-    margin-bottom: 10px;
-    border: none !important;
-}
+	.treatment-cta {
+    		text-align: center;
+    		padding: 30px 20px;
+    		background-color: #87CEEB !important;
+   	 	border-radius: 15px;
+    		margin: 30px auto;
+    		max-width: 700px;
+    		box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    		border: 1.5px solid #1e5631;
+	}
 
-.treatment-cta p {
-    font-size: 1.1em;
-    color: #1e5631 !important;
-    font-weight: 500;
-    max-width: 600px;
-    margin: 0 auto 20px;
-    line-height: 1.6;
-}
+	.treatment-cta h2 {
+    		font-size: 1.8em;
+   		color: #1e5631 !important; 
+    		font-weight: bold;
+    		margin-bottom: 10px;
+    		border: none !important;
+	}
 
-.btn-gold {
-    background: linear-gradient(135deg, #daa520 0%, #b8860b 100%);
-    color: white;
-    padding: 12px 35px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1em;
-    display: inline-block;
-    transition: 0.4s;
-}
-	.slider-container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 20px auto;
-    height: 400px; /* Desktop එකට උස */
-    overflow: hidden;
-    border-radius: 15px;
-    position: relative;
-}
+	.treatment-cta p {
+    		font-size: 1.1em;
+    		color: #1e5631 !important;
+    		font-weight: 500;
+   		 max-width: 600px;
+    		margin: 0 auto 20px;
+    		line-height: 1.6;
+	}
 
-/* Slider එකේ ඇතුළත කොටස */
-.slider {
-    display: flex;
-    width: 500%; /* පින්තූර 5ක් සඳහා */
-    height: 100%;
-    animation: slide 25s infinite ease-in-out; /* වේගය ටිකක් වැඩි කළා (25s) */
-}
+	.btn-gold {
+    		background: linear-gradient(135deg, #daa520 0%, #b8860b 100%);
+    		color: white;
+    		padding: 12px 35px;
+    		text-decoration: none;
+    		border-radius: 50px;
+    		font-weight: 600;
+    		font-size: 1em;
+    		display: inline-block;
+    		transition: 0.4s;
+	}
 
-/* පින්තූර සකස් කිරීම */
-.slider img {
-    width: 20%; 
-    height: 100%;
-    object-fit: cover; /* පින්තූර ඇද නොවී පෙනීමට */
-}
+  	.slider-container {
+   		 width: 100%;
+    		max-width: 1100px;
+    		margin: 20px auto;
+    		height: 400px; /* Desktop එකට උස */
+    		overflow: hidden;
+    		border-radius: 15px;
+    		position: relative;
+	}
 
-/* Animation එක */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    15% { transform: translateX(0); } 
-    20% { transform: translateX(-20%); } 
-    35% { transform: translateX(-20%); }
-    40% { transform: translateX(-40%); }
-    55% { transform: translateX(-40%); }
-    60% { transform: translateX(-60%); }
-    75% { transform: translateX(-60%); }
-    80% { transform: translateX(-80%); }
-    95% { transform: translateX(-80%); }
-    100% { transform: translateX(0); }
-}
+	.slider {
+    		display: flex;
+    		width: 500%; /* පින්තූර 5ක් (4+1) නිසා 500% අනිවාර්යයි */
+    		height: 100%;
+    		animation: slide 25s infinite ease-in-out;
+	}
+	.slider img {
+    		width: 20%; /* 100% / 5 = 20% */
+    		height: 100%;
+    	object-fit: cover;
+	}
 
-/* --- Phone එක සඳහා විශේෂයෙන් සකස් කළ කොටස (Responsive) --- */
-@media (max-width: 768px) {
-    .slider-container {
-        height: 250px; /* Phone එකේදී උස අඩු කිරීම */
-        margin: 10px auto;
+	@keyframes slide {
+    	0% { transform: translateX(0); }
+    	20% { transform: translateX(0); }      /* පින්තූරය 1 රැඳී සිටීම */
+    	25% { transform: translateX(-20%); }   /* පින්තූරය 2 ට මාරු වීම */
+    	45% { transform: translateX(-20%); }   /* පින්තූරය 2 රැඳී සිටීම */
+    	50% { transform: translateX(-40%); }   /* පින්තූරය 3 ට මාරු වීම */
+    	70% { transform: translateX(-40%); }   /* පින්තූරය 3 රැඳී සිටීම */
+    	75% { transform: translateX(-60%); }   /* පින්තූරය 4 ට මාරු වීම */
+    	95% { transform: translateX(-60%); }   /* පින්තූරය 4 රැඳී සිටීම */
+    	100% { transform: translateX(-80%); }  /* පින්තූරය 1 (Copy) ට යාම */
+
+	}
+		@media (max-width: 768px) {
+    		.slider-container {
+        	height: 250px; /* Phone එකේදී උස අඩු කිරීම */
+        	margin: 10px auto;
+    	}
     }
-}
-        	.container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-        	section { background: white; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--primary); }
-        	h2 { color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 10px; margin-bottom: 25px; width: 100%; text-align: center; }
-        
-        	.doctor-card { background: #fdfaf0; border-radius: 10px; padding: 25px; margin-top: 20px; box-shadow: inset 5px 0 0 var(--primary); }
-        	.doctor-card h4 { color: #8b4513; margin: 0 0 10px; font-size: 1.5em; }
-        
-        	.treatment-cta { text-align: center; padding: 60px 0; background: white; border-radius: 15px; margin-top: 40px; }
-        	.btn-gold {
-            	background: linear-gradient(135deg, var(--accent), #b8860b);
-            	color: white; padding: 18px 45px; text-decoration: none; border-radius: 50px;
-            	font-weight: bold; font-size: 1.4em; display: inline-block; transition: 0.3s;
-           	 box-shadow: 0 5px 15px rgba(218, 165, 32, 0.4); font-family: 'Poppins', sans-serif;
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        section { background: white; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--primary); }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 10px; margin-bottom: 25px; width: 100%; text-align: center; }       
+        .doctor-card { background: #fdfaf0; border-radius: 10px; padding: 25px; margin-top: 20px; box-shadow: inset 5px 0 0 var(--primary); }
+        .doctor-card h4 { color: #8b4513; margin: 0 0 10px; font-size: 1.5em; }
+       
+        .treatment-cta { text-align: center; padding: 60px 0; background: white; border-radius: 15px; margin-top: 40px; }
+        .btn-gold {
+            background: linear-gradient(135deg, var(--accent), #b8860b);
+            color: white; padding: 18px 45px; text-decoration: none; border-radius: 50px;
+            font-weight: bold; font-size: 1.4em; display: inline-block; transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(218, 165, 32, 0.4); font-family: 'Poppins', sans-serif;
         }
-        	.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(218, 165, 32, 0.6); }
-        
-        	footer { background: #1a1a1a; color: white; padding: 60px 20px; text-align: center; }
-        	.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left; max-width: 1100px; margin: auto; }
-    	</style>
+        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(218, 165, 32, 0.6); }        
+        footer { background: #1a1a1a; color: white; padding: 60px 20px; text-align: center; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left; max-width: 1100px; margin: auto; }
+
+    </style>
     </head>
-  <body>
+	<body>
     <header>
-      <header style="padding: 40px 10px; background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('ayurveda_bg.jpg'); background-size: cover; background-position: center; color: white; text-align: center;">
+      	<header style="padding: 40px 10px; background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('ayurveda_bg.jpg'); background-size: cover; background-position: center; color: white; text-align: center;"> 
+    	<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; max-width: 1200px; margin: 0 auto;">
+	<div style="flex: 1; min-width: 280px; text-align: center;">
+        <img src="shop_left.jpg" alt="Shop Left" style="width: 320px; height: 220px; border-radius: 15px; border: 4px solid #daa520; object-fit: cover; box-shadow: 0 8px 20px rgba(0,0,0,0.5); max-width: 100%;">
     
-    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; max-width: 1200px; margin: 0 auto;">
-        
-        <div style="flex: 1; min-width: 280px; text-align: center;">
-            <img src="shop_left.jpg" alt="Shop Left" style="width: 320px; height: 220px; border-radius: 15px; border: 4px solid #daa520; object-fit: cover; box-shadow: 0 8px 20px rgba(0,0,0,0.5); max-width: 100%;">
-        </div>
+   </div>
 
         <div style="flex: 1.5; min-width: 280px; padding: 10px;">
             <div style="width: 140px; height: 180px; background: white; border-radius: 50% / 60% 60% 40% 40%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 4px solid #daa520; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.4);">
                 <img src="logo.jpg" alt="Jewayu Logo" style="width: 85%; height: auto; object-fit: contain;">
-            </div>
-            
+
+        </div>
+           
             <h1 style="margin: 0; font-size: calc(1.8em + 1vw); font-family: 'Abhaya Libre', serif; text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">ජීවායු වෙද මැදුර</h1>
             <p style="margin: 10px 0; font-size: 1.2em; color: #daa520; font-weight: bold; text-shadow: 1px 1px 4px rgba(0,0,0,0.5);">දිවියට සුවයක් | A cure for life</p>
             <p style="font-size: 1em; opacity: 0.9; text-shadow: 1px 1px 4px rgba(0,0,0,0.5);">16 mile post, Thalawa Road, Eppawala.<br>Tel: 070 252 0676</p>
-        </div>
 
-        <div style="flex: 1; min-width: 280px; text-align: center;">
-            <img src="shop_right.jpg" alt="Shop Right" style="width: 320px; height: 220px; border-radius: 15px; border: 4px solid #daa520; object-fit: cover; box-shadow: 0 8px 20px rgba(0,0,0,0.5); max-width: 100%;">
         </div>
-
+        	<div style="flex: 1; min-width: 280px; text-align: center;">
+            	<img src="shop_right.jpg" alt="Shop Right" style="width: 320px; height: 220px; border-radius: 15px; border: 4px solid #daa520; object-fit: cover; box-shadow: 0 8px 20px rgba(0,0,0,0.5); max-width: 100%;">
+        </div>
     </div>
-</header>
-	</header>
-
-	<nav>
-    		<a href="#about-us">අපි ගැන | About Us</a>
-		<a href="#contact-section">සම්බන්ධ වන්න | Contact Us</a>
-    		<a href="treatments.html">ප්‍රතිකාර | Treatments</a>
-    		<a href="treatment_images.html">ඡායාරෑප ගැලරිය | Photo Gallery</a>
-	</nav>
-
+   </header>
+      </header>
+  <nav>
+    	<a href="#about-us">අපි ගැන | About Us</a>
+	<a href="#contact-section">සම්බන්ධ වන්න | Contact Us</a>
+    	<a href="treatments.html">ප්‍රතිකාර | Treatments</a>
+    	<a href="treatment_images.html">ඡායාරෑප ගැලරිය | Photo Gallery</a>
+  </nav>
 	<div class="slider-container">
-   	 <div class="slider">
+    	<div class="slider">
         <img src="img1.jpg" alt="Jeevayu 1">
         <img src="img2.jpg" alt="Jeevayu 2">
         <img src="img3.jpg" alt="Jeevayu 3">
         <img src="img4.jpg" alt="Jeevayu 4">
         <img src="img1.jpg" alt="Jeevayu 1"> 
+
     </div>
+
  </div>
-
- 	
-
     <div class="container">
         <section id="about-us">
     <h2>අපි ගැන | About Us</h2>
-    
     <div style="
     text-align: center; 
     max-width: 900px; 
@@ -186,39 +173,40 @@
     border-radius: 20px; 
     border-left: 5px solid #daa520; 
     border-right: 5px solid #daa520;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-">
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+
     <p style="
         font-family: 'Abhaya Libre', serif; 
         font-size: 1.4em; 
         line-height: 1.8; 
         color: #1e5631; 
         font-weight: 700; 
-        margin: 0;
-    ">
+        margin: 0;">
+
         <span style="font-size: 2em; color: #daa520; line-height: 0;">“</span>
-        වසර ගණනාවක පාරම්පරික අත්දැකීම් සහ විශ්වාසය පෙරදැරි කර, ආයුර්වේදයේ නවීන දැනුම උපයෝගී කර ගනිමින්  <span style="color: #daa520;">ජීවායු වෙද මැදුර</span>, හුදෙක් රෝගයකට ප්‍රතිකාර කිරීමට එහා ගිය, මානුෂීය මෙන්ම සුහදශීලිත්වය කැටි කර ගත් විශේෂ ක්‍රමවේද සමගින් ඔබේ දිවියට  සුවයක් (A Cure for Life) ගෙන දෙන පින්බිමකි.
-        <span style="font-size: 2em; color: #daa520; line-height: 0;">”</span>
-    </p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px;">
+        	වසර ගණනාවක පාරම්පරික අත්දැකීම් සහ විශ්වාසය පෙරදැරි කර, ආයුර්වේදයේ නවීන දැනුම උපයෝගී කර ගනිමින්  <span style="color: #daa520;">ජීවායු වෙද මැදුර</span>, හුදෙක් රෝගයකට ප්‍රතිකාර කිරීමට එහා ගිය, මානුෂීය මෙන්ම සුහදශීලිත්වය කැටි කර ගත් විශේෂ ක්‍රමවේද සමගින් ඔබේ දිවියට  සුවයක් (A Cure for Life) ගෙන දෙන පින්බිමකි.
+        <span style="font-size: 2em; color: #daa520; line-height: 0;">”</span
+    	</p>
+
+    </div>
+	<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px;">
         <div class="doctor-card" style="margin-top: 0;">
             <h4 style="color: #1e5631; border-bottom: 1px solid #daa520; padding-bottom: 10px;">අපගේ අරමුණ (Our Vision)</h4>
             <p style="line-height: 1.6;">පාරම්පරික හෙළ වෙදකමේ අසිරියත්, සොබාදහමේ සුවකිරීමේ බලයත් ආයුර්වේදයේ නවීන ක්‍රමවේදත් උපයෝගී කරගනිමින්, නිරෝගී සහ සතුටින් පිරි පරපුරක් බිහිකිරීමේ ඒප්පාවල ප්‍රදේශයේ ප්‍රමුඛතම ආයුර්වේද සුව සෙවණ වීම අපගේ අරමුණයි.</p>
-	    <p style="line-height: 1.6;">"Our vision is to become the leading Ayurvedic healing center in the Eppawala region, dedicated to fostering a healthy and happy generation by integrating the wonders of traditional Hela medicine, the natural healing power of nature, and modern Ayurvedic methodologies.".</p>
-        </div>
-        
+    	    <p style="line-height: 1.6;">"Our vision is to become the leading Ayurvedic healing center in the Eppawala region, dedicated to fostering a healthy and happy generation by integrating the wonders of traditional Hela medicine, the natural healing power of nature, and modern Ayurvedic methodologies.".</p>
+
+     </div>       
         <div class="doctor-card" style="margin-top: 0;">
             <h4 style="color: #1e5631; border-bottom: 1px solid #daa520; padding-bottom: 10px;">අපගේ මෙහෙවර (Our Mission)</h4>
             <p style="line-height: 1.6;">පරම්පරාගතව පැවත එන දේශීය වෛද්‍ය රහස් සහ පිරිසිදු ආයුර්වේද ප්‍රතිකාර ක්‍රමවේදයන් මගින්, රෝගීන්ගේ කායික හා මානසික සුවතාවය ඉහළ නැංවීමත්, උසස් ප්‍රමිතියෙන් යුතු වෛද්‍ය සේවාවක් සපයමින් ගුණාත්මක  ඔ!ෂධ භාවිතයෙන්  සුවබර ජීවිතයක් උරුම කර දීම අපගේ මෙහෙවරයි.</p>
-	    <p style="line-height: 1.6;">"Our mission is to enhance the physical and mental well-being of our patients through ancestral indigenous medical secrets and pure Ayurvedic treatments, while ensuring a healthy life by providing high-quality medical services and premium herbal medicines.".</p>
+    	    <p style="line-height: 1.6;">"Our mission is to enhance the physical and mental well-being of our patients through ancestral indigenous medical secrets and pure Ayurvedic treatments, while ensuring a healthy life by providing high-quality medical services and premium herbal medicines.".</p>
+     </div>
         </div>
-    </div>
-  <h4 style="text-align: center; color: #1e5631; margin-top: 40px; margin-bottom: 25px; font-size: 1.6em;">අපගේ ප්‍රධාන වෛද්‍යවරු | Our Chief Physicians</h4>
+  	    <h4 style="text-align: center; color: #1e5631; margin-top: 40px; margin-bottom: 25px; font-size: 1.6em;">අපගේ ප්‍රධාන වෛද්‍යවරු | Our Chief Physicians</h4>
 
-<style>
-    /* වෛද්‍යවරුන්ගේ Card එක සඳහා අලුත් Style */
-    .dr-profile-container {
+  <style>
+
+    	.dr-profile-container {
         display: flex;
         flex-wrap: wrap; /* Phone එකේදී යටට යාමට */
         align-items: center;
@@ -229,6 +217,7 @@
         border-radius: 15px;
         border-left: 5px solid #daa520;
     }
+
     .dr-image {
         width: 150px;
         height: 150px;
@@ -241,77 +230,93 @@
         flex: 1;
         min-width: 280px; /* Phone එකේදී මීට වඩා අඩු වුවහොත් යටට යයි */
     }
-    
+
     /* Phone එක සඳහා විශේෂයෙන් */
     @media (max-width: 600px) {
         .dr-profile-container {
             flex-direction: column; /* පින්තූරය උඩට සහ විස්තරය යටට */
             text-align: center;
-        }
+    }
         .dr-image {
             width: 130px;
             height: 130px;
         }
     }
-</style>
 
-<div class="dr-profile-container">
-    <img src="dr_somarathna.jpg" alt="Dr. P. Somarathna" class="dr-image">
-    <div class="dr-info">
-        <p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය පී. සොමරත්න (Dr. P. Somarathna)</p>
-        <p style="margin: 5px 0;">තම පරම්පරාවේ පුස්කොලපොත් සහ තම පරපුරේ වෙද සෘෂිවරැන්ගෙන් ලබාගත්  දැනුමින් සර්වාංග රෝග පිළිබඳ පුහුණුව ලත් පාරම්පරික වෛද්‍යවරයෙකි. වසර 15 කට වැඩි අත්දැකීම් සහිත, භූත විද්‍යාව පිළිබඳ හසල දැනුමක් ඇති ඉසිවරයෙකි.</p>
-        <p style="margin: 5px 0;"> He is a traditional physician trained in all kinds of diseases, with the knowledge he has acquired from the books of his generation and the medical sages of his generation. He is a healer with over 15 years of experience and a profound knowledge of demonology.</p>
+  </style>
 
-    </div>
-</div>
+	<div class="dr-profile-container">
+    	<img src="dr_somarathna.jpg" alt="Dr. P. Somarathna" class="dr-image">
+    	<div class="dr-info">
+        	<p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය පී. සොමරත්න (Dr. P. Somarathna)</p>
+        	<p style="margin: 5px 0;">තම පරම්පරාවේ පුස්කොලපොත් සහ තම පරපුරේ වෙද සෘෂිවරැන්ගෙන් ලබාගත්  දැනුමින් සර්වාංග රෝග පිළිබඳ පුහුණුව ලත් පාරම්පරික වෛද්‍යවරයෙකි. වසර 15 කට වැඩි අත්දැකීම් සහිත, භූත විද්‍යාව පිළිබඳ හසල දැනුමක් ඇති ඉසිවරයෙකි.</p>
+        	<p style="margin: 5px 0;"> He is a traditional physician trained in all kinds of diseases, with the knowledge he has acquired from the books of his generation and the medical sages of his generation. He is a healer with over 15 years of experience and a profound knowledge of demonology.</p>
+    	</div>
+   </div>
+	<div class="dr-profile-container">
+    	<img src="dr_mangalikherath.jpg" alt="Dr. Mangalika Herath" class="dr-image">
+    	<div class="dr-info">
+        	<p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය එච්.එම්. මංගලිකා හේරත් (Dr. Mangalika Herath)</p>
+        	<p style="margin: 5px 0;">**සර්වාංග රෝග පිළිබඳ පුහුණුව** සහ **ආයුර්වේද හා කේරල පංචකර්ම** පිළිබඳ සුවිශේෂී දැනුමක් සහිත පළපුරුදු දේශීය වෛද්‍යවරියකි. දේශීය හා විදේශීය පුහුණුව ලැබූ එතුමිය, සාම්ප්‍රදායික ආයුර්වේද ක්‍රමවේදයන් යොදා ගනිමින් සාර්ථක ප්‍රතිකාර ලබා දීම පිළිබඳව ප්‍රසිද්ධය. වසර කිහිපයක්ම උතුරැමැද පළාතේ හොදම පරිසර නිළධාරිණිය ලෙසින් සම්මානයට පාත්‍ර වූ පරිසර වේදිනියෙකි .</p>
+                <p style="margin: 5px 0;">"She is an experienced indigenous physician with specialized training in general medicine (Sarvanga Roga) and exceptional knowledge of Ayurveda and Kerala Panchakarma. Having received both local and international training, she is well-known for providing successful treatments using traditional Ayurvedic methodologies. Furthermore, she is an environmentalist who has been honored as the best environmental officer in the North Central Province for several consecutive years."</p>
+       </div>
+  </div>
+	<div class="dr-profile-container">
+    	<img src="dr_thilakarathna.jpg" alt="Dr. Gamini Thilakarathna" class="dr-image">
+    	<div class="dr-info">
+        	<p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය ශිෂ්‍ය එච්.එම්. ගාමිණී තිලකරත්න (H.M. Gamini Thilakarathna)</p>
+        	<p style="margin: 5px 0;">ඉහත වෛද්‍යවරැන්ගෙන් නිසි දැනුම ලබා ගනිමින් කුරැණෑගල ආයුර්වේද වෛද්‍ය විද්‍යලයේ පුහුණුව ලබන වෛද්‍ය ශිෂ්‍යකෙි. SMC APTI Ayurveda Panchakarma & Spa Therapy පාඨමාලාව හදාරා ඇත. ආයුර්වේද අවුෂධ නිෂ්පාදනාගාර කිහිපයක රැකියාව කිරීම තුලින් අවුෂධ වර්ග සහ අවුෂධ නිෂ්පාදනය පිළිබද විශේෂ දැනුමක් ලබා ඇත. සංධ් වේදනා සුව කිරීම සම්බන්ධයෙන්  නිකවැරටිය ප්‍රදේශයේ විශේෂ ප්‍රසිද්ධියක් ලබා ඇත.</p>
+          	<p style="margin: 5px 0;">"he is a medical student currently undergoing training at the Kurunegala Ayurvedic Medical College, gaining profound knowledge under the guidance of the aforementioned physicians. he have successfully completed the SMC APTI Ayurveda Panchakarma & Spa Therapy course. Furthermore, through his professional experience at several Ayurvedic pharmaceutical manufacturing plants, he have acquired specialized knowledge in medicinal herbs and the production of Ayurvedic medicines."</p>
+       </div>
+   
+  </div>
+     		</section> <div class="treatment-cta">
+    		<h2>දිවියට සුවයක්</h2>
+    		<p>ආයුර්වේද ප්‍රතිකාර ක්‍රමවේදයන් පිළිබඳ වැඩි විස්තර මෙතැනින් ලබාගන්න.</p>
+    		<a href="treatments.html" class="btn-gold">ප්‍රතිකාර සේවා ➔</a>
+       </div>
+   </div>
 
-<div class="dr-profile-container">
-    <img src="dr_mangalikherath.jpg" alt="Dr. Mangalika Herath" class="dr-image">
-    <div class="dr-info">
-        <p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය එච්.එම්. මංගලිකා හේරත් (Dr. Mangalika Herath)</p>
-        <p style="margin: 5px 0;">**සර්වාංග රෝග පිළිබඳ පුහුණුව** සහ **ආයුර්වේද හා කේරල පංචකර්ම** පිළිබඳ සුවිශේෂී දැනුමක් සහිත පළපුරුදු දේශීය වෛද්‍යවරියකි. දේශීය හා විදේශීය පුහුණුව ලැබූ එතුමිය, සාම්ප්‍රදායික ආයුර්වේද ක්‍රමවේදයන් යොදා ගනිමින් සාර්ථක ප්‍රතිකාර ලබා දීම පිළිබඳව ප්‍රසිද්ධය. වසර කිහිපයක්ම උතුරැමැද පළාතේ හොදම පරිසර නිළධාරිණිය ලෙසින් සම්මානයට පාත්‍ර වූ පරිසර වේදිනියෙකි .</p>
-           	    <p style="margin: 5px 0;">"She is an experienced indigenous physician with specialized training in general medicine (Sarvanga Roga) and exceptional knowledge of Ayurveda and Kerala Panchakarma. Having received both local and international training, she is well-known for providing successful treatments using traditional Ayurvedic methodologies. Furthermore, she is an environmentalist who has been honored as the best environmental officer in the North Central Province for several consecutive years."</p>
-    </div>
-</div>
-
-<div class="dr-profile-container">
-    <img src="dr_thilakarathna.jpg" alt="Dr. Gamini Thilakarathna" class="dr-image">
-    <div class="dr-info">
-        <p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය ශිෂ්‍ය එච්.එම්. ගාමිණී තිලකරත්න (H.M. Gamini Thilakarathna)</p>
-        <p style="margin: 5px 0;">ඉහත වෛද්‍යවරැන්ගෙන් නිසි දැනුම ලබා ගනිමින් කුරැණෑගල ආයුර්වේද වෛද්‍ය විද්‍යලයේ පුහුණුව ලබන වෛද්‍ය ශිෂ්‍යකෙි. SMC APTI Ayurveda Panchakarma & Spa Therapy පාඨමාලාව හදාරා ඇත. ආයුර්වේද අවුෂධ නිෂ්පාදනාගාර කිහිපයක රැකියාව කිරීම තුලින් අවුෂධ වර්ග සහ අවුෂධ නිෂ්පාදනය පිළිබද විශේෂ දැනුමක් ලබා ඇත. සංධ් වේදනා සුව කිරීම සම්බන්ධයෙන්  නිකවැරටිය ප්‍රදේශයේ විශේෂ ප්‍රසිද්ධියක් ලබා ඇත.</p>
- 	    	    <p style="margin: 5px 0;">"he is a medical student currently undergoing training at the Kurunegala Ayurvedic Medical College, gaining profound knowledge under the guidance of the aforementioned physicians. he have successfully completed the SMC APTI Ayurveda Panchakarma & Spa Therapy course. Furthermore, through his professional experience at several Ayurvedic pharmaceutical manufacturing plants, he have acquired specialized knowledge in medicinal herbs and the production of Ayurvedic medicines."</p>
-    </div>
-</div>
-  
-     </section> <div class="treatment-cta">
-    <h2>දිවියට සුවයක්</h2>
-    <p>ආයුර්වේද ප්‍රතිකාර ක්‍රමවේදයන් පිළිබඳ වැඩි විස්තර මෙතැනින් ලබාගන්න.</p>
-    <a href="treatments.html" class="btn-gold">ප්‍රතිකාර සේවා ➔</a>
-</div>
- 
-    </div>
-
-    <style>
-    .footer-area {
+      <style>
+    	.footer-area {
         background-color: #1a1a1a; /* කළු පසුබිම */
         color: white;
         padding: 60px 20px;
         font-family: 'Abhaya Libre', serif;
     }
-    .footer-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        max-width: 1200px;
-        margin: auto;
-        align-items: start;
-	justify-items: center;
-	text-align: center;
+
+    	.footer-grid {
+    	display: grid;
+    	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    	gap: 40px;
+    	max-width: 1200px;
+    	margin: auto;
+   	align-items: center; /* සියල්ල එකම මට්ටමකට ගනී */
+    	text-align: center;
+
+   }
+	.map-box {
+    		width: 100%;
+   	 	max-width: 400px; /* මැප් එකේ පළල */
+    		height: 300px;
+    		margin: 0 auto; /* මැදට කිරීම */
+    		border-radius: 15px;
+    		overflow: hidden;
+    		border: 3px solid #daa520; /* රන්වන් පාට border එකක් */
+   }
+
+		@media (max-width: 768px) {
+    		.footer-grid {
+        	grid-template-columns: 1fr; /* සියල්ල යටට යටට ඒම */
     }
 
+    		.map-box {
+        	max-width: 100%; /* Phone එකේදී සම්පූර්ණ පළල ගැනීම */
+        	height: 250px;
+    }
+	}
+
     .footer-col.center { display: flex; justify-content: center; }
-    
-    
     .map-box {
         width: 100%;
         max-width: 350px;
@@ -331,14 +336,13 @@
         color: rgba(255,255,255,0.5);
      }
 	@media (max-width: 768px) {
-    
-    	header h1 { 
+
+    header h1 { 
         font-size: 2.2em !important; 
     }
-    	header p {
+    header p {
         font-size: 1.1em !important;
     }
-
     .slider-container { 
         height: 250px !important; 
     }
@@ -366,41 +370,46 @@
         height: 120px !important;
         margin-bottom: 15px;
     }
-
- }
-   
+ }  
  </style>
 
    <section id="contact-section" class="footer-area">
-      <div class="footer-grid">
-        
+    <div class="footer-grid">        
         <div class="footer-col">
-            <h3 class="gold-text">📍 ලිපිනය</h3>
+            <h3 class="gold-text">📍 ලිපිනය (Address)</h3>
             <p>16 mile post, තලාව පාර, එප්පාවල</p>
             <p style="font-size: 0.9em; opacity: 0.7;">Thalawa Road, Eppawala, Sri Lanka.</p>
-        </div>
 
-        <div class="footer-col ">
+        <div style="margin-top: 25px;">
+             <h3 class="gold-text">📞 දුරකථන </h3>
+             <p>+94 70 252 0676 / +94 701831000</p>
+             <p style="font-size: 0.9em;">jewayuwedamadura@gmail.com</p>
+        </div>
+           </div>
+
+        <div class="footer-col">
             <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.223847321584!2d80.40418597477382!3d8.151074491879483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afbfc0053b04541%3A0xb92e89df68d79a9f!2sJeewayu%20weda%20madura!5e0!3m2!1ssi!2slk!4v1734600000000!5m2!1ssi!2slk"></iframe> 
-
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15794.615201460394!2d80.40248475!3d8.2374354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afcf1e457f6a735%3A0x6b7807755866b1a8!2sEppawala!5e0!3m2!1sen!2slk!4v1715690000000!5m2!1sen!2slk" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
         </div>
-            
-     </div> <div class="footer-col">
+        <div class="footer-col">
             <h3 class="gold-text">⏰ විවෘත වේලාවන්</h3>
             <p><strong>සඳුදා - සිකුරාදා:</strong> 4 PM - 8 PM</p>
             <p><strong>සති අන්තය:</strong> 9 AM - 8 PM</p>
-            <div style="margin-top: 20px;">
-                <p>📞 070 252 0676</p>
-                <p style="font-size: 1em; opacity: 1;">gmail: jewayuwedamadura@gmail.com</p>
-		<p style="font-size: 1em; opacity: 1;">Facebook: www.facebook.com/jewayuwedamadura</p>
-		<p style="font-size: 1em; opacity: 1;">web : https://jeewayu-weda-madura.netlify.app/</p>
+
+            <div style="margin-top: 25px;">
+                <h3 class="gold-text">🌐 සබැඳි (Links)</h3>
+                <p><a href="https://www.facebook.com/jewayuwedamadura" target="_blank" style="color:white; text-decoration:none;">Facebook: Jeevayu Weda Madura</a></p>
+                <p style="font-size: 0.9em; opacity: 0.8;">
+    		web: <a href="https://jeewayu.github.io/jeewayu-weda-madura/" target="_blank" style="color: #3498db; text-decoration: underline;">https://jeewayu.github.io/jeewayu-weda-madura/</a>
+		</p>
             </div>
         </div>
-
     </div>
-
     <div class="copyright">
-        <p>© 2025 ජීවායු වෛද්‍ය මධ්‍යස්ථානය. සියලුම හිමිකම් ඇවිරිණි. | All Rights Reserved.</p>
+       <p>© 2025 ජීවායු වෛද්‍ය මධ්‍යස්ථානය. සියලුම හිමිකම් ඇවිරිණි.</p>
     </div>
-</section>
+</section>. 
