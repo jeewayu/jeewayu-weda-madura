@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ඖෂධ උයන | ජීවායු වෙද මැදුර</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e5631; --accent: #daa520; --bg: #f4f7f4; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--bg); color: #333; }
+        
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('ayurveda_bg.jpg');
+            background-size: cover; background-position: center;
+            color: white; padding: 40px 20px; text-align: center;
+        }
+
+        nav { 
+            background: var(--primary); padding: 15px; text-align: center; 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        nav a { 
+            color: white; text-decoration: none; margin: 0 15px; 
+            font-weight: 600; font-size: 15px; transition: 0.3s;
+        }
+        nav a:hover { color: var(--accent); }
+
+        .container { max-width: 1300px; margin: 40px auto; padding: 0 20px; }
+        
+        .page-title { text-align: center; margin-bottom: 40px; }
+        .page-title h2 { font-family: 'Abhaya Libre', serif; color: var(--primary); font-size: 2.8em; margin: 0; }
+        
+        .herb-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* එක පේළියකට 4 බැගින් */
+            gap: 20px;
+        }
+
+        .herb-card {
+            background: white; border-radius: 12px; overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            display: flex; flex-direction: column;
+            height: 100%; /* කාඩ් සියල්ල එකම උසකට */
+        }
+
+        .herb-card:hover { transform: translateY(-5px); }
+
+        .herb-img { width: 100%; height: 180px; object-fit: cover; }
+
+        .herb-content { padding: 15px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; }
+        .herb-content h3 { 
+            font-family: 'Abhaya Libre', serif; color: var(--primary); 
+            margin: 5px 0; font-size: 1.3em; 
+        }
+        .scientific-name { 
+            display: block; font-size: 0.75em; color: var(--accent); 
+            font-weight: bold; font-style: italic; margin-bottom: 8px;
+        }
+        .herb-content p { font-size: 0.88em; line-height: 1.5; color: #555; flex-grow: 1; }
+
+        footer { background: #1a1a1a; color: white; padding: 30px; text-align: center; margin-top: 50px; }
+
+        @media (max-width: 1024px) { .herb-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .herb-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .herb-grid { grid-template-columns: repeat(1, 1fr); } }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="font-family: 'Abhaya Libre', serif; font-size: 2.5em; margin: 0;">දේශීය ඖෂධ උයන</h1>
+</header>
+
+<nav>
+    <a href="index.html">මුල් පිටුව</a>
+    <a href="treatments.html">ප්‍රතිකාර</a>
+    <a href="herbs.html" style="color: var(--accent);">ඖෂධ ගැලරිය</a>
+    <a href="treatment_images.html">ඡායාරූප</a>
+    <a href="index.html#contact-section">සම්බන්ධ වන්න</a>
+</nav>
+
+<div class="container">
+    <div class="page-title">
+        <h2>ඖෂධීය ශාක සහ ගුණාංග</h2>
+    </div>
+
+    <div class="herb-grid">
+        
+        <div class="herb-card">
+            <img src="aralu.webp" alt="Aralu" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Terminalia chebula</span>
+                <h3>අරළු (Aralu)</h3>
+                <p>ශරීරයේ විෂ ඉවත් කිරීමට සහ ආහාර ජීර්ණය යහපත් කිරීමට භාවිතා කරයි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="bulu.jpeg" alt="Bulu" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Terminalia bellirica</span>
+                <h3>බුළු (Bulu)</h3>
+                <p>ඇස් පෙනීම වර්ධනයට සහ ස්වසන රෝග සඳහා ගුණදායකයි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="nelli.jpg" alt="Nelli" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Phyllanthus emblica</span>
+                <h3>නෙල්ලි (Nelli)</h3>
+                <p>ප්‍රතිශක්තිකරණය වර්ධනය කරන අතර විටමින් C බහුල ප්‍රබල ඖෂධයකි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="weniwel.jpeg" alt="Veniwel" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Coscinium fenestratum</span>
+                <h3>වෙනිවැල්ගැට</h3>
+                <p>විෂබීජ නාශකයක් ලෙසත්, ශරීරයේ දැවිල්ල සමනය කිරීමටත් යොදාගනී.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="jinger.jpeg" alt="Inguru" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Zingiber officinale</span>
+                <h3>ඉඟුරු (Ginger)</h3>
+                <p>ආහාර ජීර්ණය පහසු කරන අතර සෙම්ප්‍රතිශ්‍යාවට ඉතා ගුණදායකයි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="kurundu.jpg" alt="Kurundu" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Cinnamomum zeylanicum</span>
+                <h3>කුරුඳු (Cinnamon)</h3>
+                <p>ලේ පිරිසිදු කිරීමට සහ සීනි මට්ටම පාලනය කිරීමට උදව් වේ.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="kaha.jpg" alt="Kaha" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Curcuma longa</span>
+                <h3>කහ (Turmeric)</h3>
+                <p>ස්වභාවික විෂබීජ නාශකයකි. අභ්‍යන්තර තුවාල සුව කරයි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="beli.jpg" alt="Beli" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Aegle marmelos</span>
+                <h3>බෙලි (Beli)</h3>
+                <p>බඩවැල් ආශ්‍රිත රෝග සුව කිරීමට සහ ශරීරය සිසිල් කිරීමට ගුණදායකයි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="kohomba.jpg" alt="Kohomba" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Azadirachta indica</span>
+                <h3>කොහොඹ (Neem)</h3>
+                <p>සමේ රෝග සහ ලේ පිරිසිදු කිරීම සඳහා බහුලව භාවිතා වේ.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="bakmee.jpg" alt="Bakmee" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Nauclea orientalis</span>
+                <h3>බක්මී (Bakmee)</h3>
+                <p>සමේ රෝග සහ මුත්‍රා ආශ්‍රිත රෝග සඳහා ප්‍රතිකාර කිරීමට භාවිතා කරයි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="pavatta.jpg" alt="Pavatta" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Justicia adhatoda</span>
+                <h3>පාවට්ටා (Pavatta)</h3>
+                <p>කැස්ස, ඇදුම සහ පෙනහළු ආශ්‍රිත සෙම් රෝග සඳහා ප්‍රධානම ඖෂධයකි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="kapparawalliya.jpg" alt="Kapparawalliya" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Plectranthus amboinicus</span>
+                <h3>කප්පරවල්ලිය</h3>
+                <p>කුඩා ළමුන්ගේ කැස්ස සහ සෙම් රෝග සඳහා බහුලව භාවිතා කරන ඖෂධයකි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="katukarandu.jpg" alt="Katukarandu" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Barleria prionitis</span>
+                <h3>කටුකරඬු (Katukarandu)</h3>
+                <p>දත් කැක්කුම සහ ඉදිමුම් රෝග සමනය කිරීමට යොදා ගනී.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="iramusu.jpg" alt="Iramusu" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Hemidesmus indicus</span>
+                <h3>ඉරමුසු (Iramusu)</h3>
+                <p>ශරීරය සිසිල් කරයි. ලේ පිරිසිදු කිරීමට සහ සම පැහැපත් කිරීමට උපකාරී වේ.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="gotukola.jpg" alt="Gotukola" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Centella asiatica</span>
+                <h3>ගොටුකොළ (Gotukola)</h3>
+                <p>මතක ශක්තිය වර්ධනය කරයි. ස්නායු පද්ධතිය නිරෝගී කිරීමට උදව් වේ.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="polpala.jpg" alt="Polpala" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Aerva lanata</span>
+                <h3>පොල්පලා (Polpala)</h3>
+                <p>වකුගඩු වල ගල් දිය කිරීමට සහ මුත්‍රා මාර්ගයේ රෝග සුව කිරීමට ඉතා ප්‍රසිද්ධයි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="ranawara.jpg" alt="Ranawara" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Senna auricula</span>
+                <h3>රණවරා (Ranawara)</h3>
+                <p>දියවැඩියාව පාලනය කිරීමට සහ ශරීරයේ විෂ ඉවත් කිරීමට ගුණදායකයි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="nil-awariya.jpg" alt="Nil Awariya" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Indigofera tinctoria</span>
+                <h3>නිල් අවරිය (Nil Awariya)</h3>
+                <p>කෙස් කළඹ ශක්තිමත් කිරීමට සහ හිසකෙස් වැටීම පාලනය කිරීමට භාවිතා කරයි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="karapincha.jpg" alt="Karapincha" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Murraya koenigii</span>
+                <h3>කරපිංචා (Curry Leaves)</h3>
+                <p>කොලෙස්ටරෝල් පාලනය කරයි. අක්මාවේ ක්‍රියාකාරිත්වය යහපත් කිරීමට උදව් වේ.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="enasal.jpg" alt="Enasal" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Elettaria cardamomum</span>
+                <h3>එනසාල් (Cardamom)</h3>
+                <p>මුඛයේ දුර්ගන්ධය නැති කරයි. ආහාර ජීර්ණය ශක්තිමත් කිරීමට උපකාරී වේ.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="sudu-handun.jpg" alt="Sudu Handun" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Santalum album</span>
+                <h3>සුදු හඳුන් (Sandalwood)</h3>
+                <p>ශරීරය සිසිල් කිරීමටත්, මානසික ආතතිය අඩු කිරීමටත් යොදා ගනී.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="thibbatu.jpg" alt="Thibbatu" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Solanum torvum</span>
+                <h3>තිබ්බටු (Thibbatu)</h3>
+                <p>කැස්ස සහ සෙම් රෝග සුව කිරීමටත්, ලේ වර්ධනය කිරීමටත් උපකාරී වේ.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="mukunwenna.jpg" alt="Mukunwenna" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Alternanthera sessilis</span>
+                <h3>මුකුණුවැන්න</h3>
+                <p>ඇස් පෙනීම වර්ධනය කිරීමට සහ ශරීරයේ දැවිල්ල සමනය කිරීමට ගුණදායකයි.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="hathawariya.jpg" alt="Hathawariya" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Asparagus racemosus</span>
+                <h3>හාතවාරිය (Hathawariya)</h3>
+                <p>ශරීරයේ ශක්තිය වර්ධනය කරයි. ස්නායු පද්ධතිය නිරෝගීව තබා ගැනීමට උදව් වේ.</p>
+            </div>
+        </div>
+
+        <div class="herb-card">
+            <img src="akkapana.jpg" alt="Akkapana" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Kalanchoe pinnata</span>
+                <h3>අක්කපාන (Akkapana)</h3>
+                <p>වකුගඩු ආශ්‍රිත රෝග සහ ශරීරයේ අභ්‍යන්තර ගෙඩි සුව කිරීමට යොදා ගනී.</p>
+            </div>
+	</div>
+
+	<div class="herb-card">
+            <img src="nika.jpg" alt="Akkapana" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Kalanchoe pinnata</span>
+                <h3>nika (Akkapana)</h3>
+                <p>වකුගඩු ආශ්‍රිත රෝග සහ ශරීරයේ අභ්‍යන්තර ගෙඩි සුව කිරීමට යොදා ගනී.</p>
+            </div>
+        </div>
+
+	<div class="herb-card">
+            <img src="babila.jpg" alt="Akkapana" class="herb-img">
+            <div class="herb-content">
+                <span class="scientific-name">Kalanchoe pinnata</span>
+                <h3>babila (බැබිල)</h3>
+                <p>වකුගඩු ආශ්‍රිත රෝග සහ ශරීරයේ අභ්‍යන්තර ගෙඩි සුව කිරීමට යොදා ගනී.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 ජීවායු වෙද මැදුර. සියලුම හිමිකම් ඇවිරිණි.</p>
+</footer>
+
+</body>
+</html>
