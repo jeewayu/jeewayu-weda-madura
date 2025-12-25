@@ -7,6 +7,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ජීවායු වෙද මැදුර | Jeevayu Weda Madura</title>
+
+	<style>
+    /* සහතික පත්‍ර බොක්ස් එක උඩට මවුස් එක ගෙන යන විට ලොකු වීමට */
+    .cert-box-large {
+        transition: transform 0.3s ease; /* සෙමෙන් විශාල වීමට */
+        cursor: pointer;
+    }
+
+    .cert-box-large:hover {
+        transform: scale(1.1); /* මදක් විශාල වේ */
+        border-color: #daa520 !important; /* රන්වන් පාට වේ */
+        z-index: 10;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+    }
+</style>
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #1e5631; --accent: #1e5631; --bg: #f4f7f4; }
@@ -151,7 +166,7 @@
             <div style="text-align: center; max-width: 900px; margin: 40px auto; padding: 30px; background: #fdfaf0; border-radius: 20px; border-left: 5px solid #daa520; border-right: 5px solid #daa520; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                 <p style="font-family: 'Abhaya Libre', serif; font-size: 1.4em; line-height: 1.8; color: #1e5631; font-weight: 700; margin: 0;">
                     <span style="font-size: 2em; color: #daa520; line-height: 0;">“</span>
-                    වසර ගණනාවක පාරම්පරික අත්දැකීම් සහ විශ්වාසය පෙරදැරි කර, ආයුර්වේදයේ නවීන දැනුම උපයෝගී කර ගනිමින් <span style="color: #daa520;">ජීවායු වෙද මැදුර</span>, හුදෙක් රෝගයකට ප්‍රතිකාර කිරීමට එහා ගිය, මානුෂීය මෙන්ම සුහදශීලිත්වය කැටි කර ගත් විශේෂ ක්‍රමවේද සමගින් ඔබේ දිවියට සුවයක් (A Cure for Life) ගෙන දෙන පින්බිමකි.
+                                                         වසර ගණනාවක පාරම්පරික අත්දැකීම් සහ විශ්වාසය පෙරදැරි කර, ආයුර්වේදයේ නවීන දැනුම උපයෝගී කර ගනිමින් <span style="color: #daa520;">ජීවායු වෙද මැදුර</span>, හුදෙක් රෝගයකට ප්‍රතිකාර කිරීමට එහා ගිය, මානුෂීය මෙන්ම සුහදශීලිත්වය කැටි කර ගත් විශේෂ ක්‍රමවේද සමගින් ඔබේ දිවියට සුවයක් (A Cure for Life) ගෙන දෙන පින්බිමකි.
                     <span style="font-size: 2em; color: #daa520; line-height: 0;">”</span>
                 </p>
             </div>
@@ -166,38 +181,82 @@
                     <h4 style="color: #1e5631; border-bottom: 1px solid #daa520; padding-bottom: 10px;">අපගේ මෙහෙවර (Our Mission)</h4>
                     <p>පරම්පරාගතව පැවත එන දේශීය වෛද්‍ය රහස් සහ පිරිසිදු ආයුර්වේද ප්‍රතිකාර ක්‍රමවේදයන් මගින්, රෝගීන්ගේ කායික හා මානසික සුවතාවය ඉහළ නැංවීමත්, උසස් ප්‍රමිතියෙන් යුතු වෛද්‍ය සේවාවක් සපයමින් ගුණාත්මක ඔෂධ භාවිතයෙන් සුවබර ජීවිතයක් උරුම කර දීම අපගේ මෙහෙවරයි.</p>
                     <p>"Our mission is to enhance the physical and mental well-being of our patients through ancestral indigenous medical secrets and pure Ayurvedic treatments, while ensuring a healthy life by providing high-quality medical services and premium herbal medicines."</p>
-                </div>
-            </div>
+                </div> 
+    </div>
 
-            <h4 style="text-align: center; color: #1e5631; margin-top: 40px; margin-bottom: 25px; font-size: 1.6em;">අපගේ ප්‍රධාන වෛද්‍යවරු | Our Chief Physicians</h4>
+    <h4 style="text-align: center; color: #1e5631; margin-top: 50px; margin-bottom: 30px; font-size: 1.8em; border-bottom: 2px solid #daa520; display: inline-block; width: 100%; padding-bottom: 10px;">අපගේ ප්‍රධාන වෛද්‍යවරු | Our Chief Physicians</h4>
 
-            <div class="dr-profile-container">
-                <img src="dr_somarathna.jpg" alt="Dr. P. Somarathna" class="dr-image">
-                <div class="dr-info">
-                    <p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය පී. සොමරත්න (Dr. P. Somarathna)</p>
-                    <p>තම පරම්පරාවේ පුස්කොලපොත් සහ තම පරපුරේ වෙද සෘෂිවරැන්ගෙන් ලබාගත් දැනුමින් සර්වාංග රෝග පිළිබඳ පුහුණුව ලත් පාරම්පරික වෛද්‍යවරයෙකි. වසර 15 කට වැඩි අත්දැකීම් සහිත, භූත විද්‍යාව පිළිබඳ හසල දැනුමක් ඇති ඉසිවරයෙකි.</p>
-                    <p>He is a traditional physician trained in all kinds of diseases, with the knowledge he has acquired from the books of his generation and the medical sages of his generation. He is a healer with over 15 years of experience and a profound knowledge of demonology.</p>
-                </div>
-            </div>
+    <div class="doctor-card" style="display: flex; flex-wrap: wrap; background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); align-items: center; margin-bottom: 40px; border-top: 5px solid #1e5631;">
+    
+    <div class="doctor-info" style="flex: 1.2; min-width: 300px; padding-right: 25px;">
+        <img src="dr_somarathna.jpg" alt="Doctor" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid #daa520; margin-bottom: 15px;">
+        <h3 style="color: #8b4513; font-size: 1.5em; margin: 0;">වෛද්‍ය පී. සොමරත්න (Dr. P. Somarathna)</h3>
+        <p style="margin-top: 15px; line-height: 1.6;">"තම පරම්පරාවේ පුස්කොලපොත් සහ තම පරපුරේ වෙද සෘෂිවරැන්ගෙන් ලබාගත් දැනුමින් සර්වාංග රෝග පිළිබඳ පුහුණුව ලත් පාරම්පරික වෛද්‍යවරයෙකි.වසර 15 කට වැඩි අත්දැකීම් ඇති භූත විද්‍යව පිළිබද විශේෂ හැකියාවක් ඇති මෙතුමා පුසකොළ පොත් වල ලද දැනුමින් විශාල රෝගීන් පිරිසක් මේ වන විට සුව කර ඇත."</p>
+        <p style="font-style: italic; color: #666; font-size: 0.9em;">"ඔබ ලබාදුන් තොරතුරු පදනම් කරගෙන, "I am" භාවිතයෙන් තොරව සෘජුවම සකස් කළ ඉංග්‍රීසි පරිවර්තනය පහතින් දැක්වේ:
 
-            <div class="dr-profile-container">
-                <img src="dr_mangalikherath.jpg" alt="Dr. Mangalika Herath" class="dr-image">
-                <div class="dr-info">
-                    <p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය එච්.එම්. මංගලිකා හේරත් (Dr. Mangalika Herath)</p>
-                    <p>**සර්වාංග රෝග පිළිබඳ පුහුණුව** සහ **ආයුර්වේද හා කේරල පංචකර්ම** පිළිබඳ සුවිශේෂී දැනුමක් සහිත පළපුරුදු දේශීය වෛද්‍යවරියකි. ආයුර්වේද වෛද්‍ය විද්‍යාලයකින්  පුහුණුව  ලැබූ එතුමිය, සාම්ප්‍රදායික ආයුර්වේද ක්‍රමවේදයන් යොදා ගනිමින් සාර්ථක ප්‍රතිකාර ලබා දීම පිළිබඳව ප්‍රසිද්ධය. වසර කිහිපයක්ම උතුරැමැද පළාතේ හොදම පරිසර නිළධාරිණිය ලෙසින් සම්මානයට පාත්‍ර වූ පරිසර වේදිනියක්ද වේ.</p>
-                    <p>"She is an experienced indigenous physician with specialized training in general medicine (Sarvanga Roga) and exceptional knowledge of Ayurveda and Kerala Panchakarma. Having received both local and international training, she is well-known for providing successful treatments using traditional Ayurvedic methodologies. Furthermore, she is an environmentalist who has been honored as the best environmental officer in the North Central Province for several consecutive years."</p>
-                </div>
-            </div>
+Professional Profile
 
-            <div class="dr-profile-container">
-                <img src="dr_thilakarathna.jpg" alt="Dr. Gamini Thilakarathna" class="dr-image">
-                <div class="dr-info">
-                    <p style="font-weight: bold; color: #8b4513; font-size: 1.2em; margin: 0;">වෛද්‍ය ශිෂ්‍ය එච්.එම්. ගාමිණී තිලකරත්න (H.M. Gamini Thilakarathna)</p>
-                    <p>ඉහත වෛද්‍යවරැන්ගෙන් නිසි දැනුම ලබා ගනිමින් කුරැණෑගල ආයුර්වේද වෛද්‍ය විද්‍යලයේ පුහුණුව ලබන වෛද්‍ය ශිෂ්‍යකෙි. SMC APTI Ayurveda Panchakarma & Spa Therapy පාඨමාලාව හදාරමින් සිටී.. ආයුර්වේද අවුෂධ නිෂ්පාදනාගාර කිහිපයක රැකියාව කිරීම තුලින් අවුෂධ වර්ග සහ අවුෂධ නිෂ්පාදනය පිළිබද විශේෂ දැනුමක් ලබා ඇත. සංධ් වේදනා සුව කිරීම සම්බන්ධයෙන් නිකවැරටිය ප්‍රදේශයේ විශේෂ ප්‍රසිද්ධියක් ලබා ඇත.</p>
-                    <p>"he is a medical student currently undergoing training at the Kurunegala Ayurvedic Medical College, gaining profound knowledge under the guidance of the aforementioned physicians. he have successfully completed the SMC APTI Ayurveda Panchakarma & Spa Therapy course. Furthermore, through his professional experience at several Ayurvedic pharmaceutical manufacturing plants, he have acquired specialized knowledge in medicinal herbs and the production of Ayurvedic medicines."</p>
-                </div>
+A traditional medical practitioner trained in General Medicine (Sarvanga Roga), utilizing knowledge inherited from ancestral palm-leaf manuscripts (Puskola Poth) and the wisdom of lineage medical sages. With over 15 years of experience, he possesses specialized experise in Bhuta Vidya (Exorcism/Traditional Psychiatry). Leveraging the profound knowledge found in ancient palm-leaf scriptures, he has successfully treated and cured a vast number of patients."</p>
+        </div> 
+	<div class="certificate-container" style="flex: 1; min-width: 300px; display: flex; justify-content: center; padding: 10px;">
+           <div class="certificate-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; justify-items: center;">
+                <div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #f9f9f9;">
+                <img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
             </div>
-        </section>
+                <div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+            </div>
+                <div class="cert-box-large" style="grid-column: span 2; width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="doctor-card" style="display: flex; flex-wrap: wrap; background: #fff; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); align-items: center; margin-bottom: 30px; border-left: 6px solid #1e5631;">
+         <div class="doctor-info" style="flex: 1.2; min-width: 300px; padding-right: 25px;">
+            <img src="dr_mangalikherath.jpg" alt="Dr. Mangalika Herath" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #daa520;">
+            <h3 style="color: #8b4513; margin: 0;">වෛද්‍ය එච්.එම්. මංගලිකා හේරත් (Dr. Mangalika Herath)</h3>
+            <p style="font-size: 0.95em; line-height: 1.6; color: #333; margin-top: 10px;">සර්වාංග රෝග පිළිබඳ පුහුණුව සහ ආයුර්වේද හා කේරල පංචකර්ම පිළිබඳ සුවිශේෂී දැනුමක් සහිත පළපුරුදු දේශීය වෛද්‍යවරියකි. ආයුර්වේද වෛද්‍ය විද්‍යාලයකින් පුහුණුව ලැබූ එතුමිය, සාම්ප්‍රදායික ආයුර්වේද ක්‍රමවේදයන් යොදා ගනිමින් සාර්ථක ප්‍රතිකාර ලබා දීම පිළිබඳව ප්‍රසිද්ධය. වසර කිහිපයක්ම උතුරැමැද පළාතේ හොදම පරිසර නිළධාරිණිය ලෙසින් සම්මානයට පාත්‍ර වූ පරිසර වේදිනියක්ද වේ.</p>
+            <p style="font-size: 0.9em; font-style: italic; color: #666;">"An experienced Indigenous Medical Practitioner with comprehensive training in General Medicine (Sarvanga Roga) and specialized expertise in Ayurvedic and Kerala Panchakarma therapies. Trained at an Ayurvedic Medical College, she is well-known for providing successful treatments using traditional Ayurvedic methodologies. Furthermore, she is a dedicated Environmentalist who has been honored with the award for the Best Environmental Officer in the North Central Province for several consecutive years."</p>
+       </div> 
+	  <div class="certificate-container" style="flex: 1; min-width: 300px; display: flex; justify-content: center; padding: 10px;">
+           <div class="certificate-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; justify-items: center;">
+                <div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #f9f9f9;">
+                <img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+            </div>
+                <div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+            </div>
+                <div class="cert-box-large" style="grid-column: span 2; width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+            </div>
+        </div>
+    </div>
+</div>
+   <div class="doctor-card" style="display: flex; flex-wrap: wrap; background: #fff; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); align-items: center; margin-bottom: 30px; border-left: 6px solid #daa520;">
+    <div class="doctor-info" style="flex: 1.2; min-width: 300px; padding-right: 25px;">
+        <img src="dr_thilakarathna.jpg" alt="Dr. Gamini Thilakarathna" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #daa520;">
+        <h3 style="color: #8b4513; margin: 0;">වෛද්‍ය ශිෂ්‍ය එච්.එම්. ගාමිණී තිලකරත්න (H.M. Gamini Thilakarathna)</h3>
+        <p style="font-size: 0.95em; line-height: 1.6; color: #333; margin-top: 10px;">කුරැණෑගල ආයුර්වේද වෛද්‍ය විද්‍යලයේ පුහුණුව ලබන වෛද්‍ය ශිෂ්‍යකෙි. SMC APTI Ayurveda Panchakarma & Spa Therapy පාඨමාලාව හදාරමින් සිටී. ආයුර්වේද අවුෂධ නිෂ්පාදනාගාර කිහිපයක රැකියාව කිරීම තුලින් විශේෂ දැනුමක් ලබා ඇත. සංධි වේදනා සුව කිරීම සම්බන්ධයෙන් නිකවැරටිය ප්‍රදේශයේ විශේෂ ප්‍රසිද්ධියක් ලබා ඇත.</p>
+        <p style="font-size: 0.9em; font-style: italic; color: #666;">"An Ayurvedic Medical Student training at the Ayurvedic Medical College, Kurunegala, currently pursuing the SMC APTI Ayurveda Panchakarma & Spa Therapy course. Possesses specialized knowledge gained through working at several Ayurvedic medicine manufacturing laboratories. Highly reputed in the Nikaweratiya area for the successful treatment of joint pains (Sandhi Vedana)."</p>
+    </div> 
+	<div class="certificate-container" style="flex: 1; min-width: 300px; display: flex; justify-content: center; padding: 10px;">
+        <div class="certificate-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; justify-items: center;">
+     
+	<div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #f9f9f9;">
+	<img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+    </div>
+        <div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+    </div>
+        <div class="cert-box-large" style="grid-column: span 2; width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+    </div>
+        </div>
+    </div>
+</div>
+
+</section>
 
         <div class="treatment-cta">
             <h2>දිවියට සුවයක්</h2>
@@ -251,8 +310,27 @@
         </div>
     </div>
         <div class="copyright">
-            <p>© 2025 ජීවායු වෛද්‍ය මධ්‍යස්ථානය. සියලුම හිමිකම් ඇවිරිණි.</p>
-        </div>
-    </section>
+       <div class="copyright">
+        <p>© 2025 ජීවායු වෛද්‍ය මධ්‍යස්ථානය. සියලුම හිමිකම් ඇවිරිණි.</p>
+    </div>
+
+    <div id="imageModal" onclick="closeImage()" style="display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; cursor: zoom-out;">
+        <img id="modalImg" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 20px rgba(255,255,255,0.2);">
+    </div>
+
+    <script>
+        function zoomImage(imgElement) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImg");
+            modal.style.display = "flex"; 
+            modalImg.src = imgElement.src;
+        }
+
+        function closeImage() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
+
 </body>
 </html>
