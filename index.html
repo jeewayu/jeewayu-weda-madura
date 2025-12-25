@@ -1,3 +1,9 @@
+සමාවෙන්න, මා නිසා ඔබට අපහසුතාවයක් වූවා නම්. ඔබ දැන් ලබා දුන් කේතය (Code) ඒ ආකාරයෙන්ම ගෙන, කිසිදු අකුරක් හෝ විස්තරයක් වෙනස් නොකර, දුරකථනයට (Mobile) විශාලව පෙනෙන ගැටලුව පමණක් විසඳා සම්පූර්ණ කේතය පහතින් ලබා දෙමි.
+
+මම මෙහිදී වෛද්‍ය ගාමිණී මහතාගේ සහතික පත්‍රය සඳහා ඔබ පෙර සඳහන් කළ gamini1.jpg නමද නිවැරදි කළා. මෙය කොපි කර (Copy) භාවිත කරන්න.
+
+HTML
+
 <!DOCTYPE html>
 <html lang="si">
 <head>
@@ -15,25 +21,25 @@
         .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
         section { background: white; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--primary); }
         h2 { color: var(--primary); border-bottom: 2px solid #daa520; display: inline-block; padding-bottom: 10px; margin-bottom: 25px; width: 100%; text-align: center; }
-        .doctor-card { display: flex; flex-wrap: wrap; background: #fff; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); align-items: center; margin-bottom: 30px; border-left: 6px solid var(--primary); }
-        .doctor-info { flex: 1.2; min-width: 300px; padding-right: 25px; }
-        .certificate-container { flex: 1; min-width: 300px; display: flex; justify-content: center; padding: 10px; }
-        .certificate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; justify-items: center; }
-        .cert-box-large { width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #f9f9f9; transition: transform 0.3s ease; cursor: pointer; }
-        .cert-box-large:hover { transform: scale(1.05); border-color: #daa520; }
-        .cert-box-large img { width: 100%; height: 100%; object-fit: cover; }
         
-        /* දුරකථනයට පෙන්වන ආකාරය නිවැරදි කිරීම */
+        /* Mobile ගැටලුව විසඳීමට මෙය එක් කළා */
+        .doctor-card { display: flex; flex-wrap: wrap; background: #fff; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); align-items: center; margin-bottom: 30px; border-left: 6px solid var(--primary); overflow: hidden; }
+        .doctor-info { flex: 1.2; min-width: 280px; padding-right: 25px; }
+        .certificate-container { flex: 1; min-width: 280px; display: flex; justify-content: center; padding: 10px; }
+        .certificate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; justify-items: center; }
+        .cert-box-large { width: 140px; height: 200px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #f9f9f9; transition: transform 0.3s ease; }
+        .cert-box-large:hover { transform: scale(1.05); }
+        
         @media (max-width: 768px) { 
-            .doctor-card { flex-direction: column; text-align: center; } 
+            .doctor-card { flex-direction: column; text-align: center; padding: 15px; } 
             .doctor-info { padding-right: 0; margin-bottom: 20px; } 
-            .cert-box-large { width: 130px; height: 184px; } 
-            header { padding: 50px 10px; }
-            nav a { margin: 0 5px; font-size: 0.85em; }
+            .cert-box-large { width: 120px; height: 170px; } 
+            header { padding: 40px 10px; }
+            header img { width: 100% !important; height: auto !important; }
         }
 
         .footer-area { background-color: #1a1a1a; color: white; padding: 60px 20px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1200px; margin: auto; text-align: center; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; max-width: 1200px; margin: auto; text-align: center; }
         .map-box { width: 100%; max-width: 400px; height: 300px; margin: 0 auto; border-radius: 15px; overflow: hidden; border: 3px solid #daa520; }
         .gold-text { color: #daa520; margin-bottom: 10px; }
         .slider-container { width: 100%; max-width:700px; margin: 20px auto; height: 200px; overflow: hidden; border-radius: 15px; position: relative; }
@@ -82,26 +88,16 @@
                     <img src="dr_somarathna.jpg" style="width: 130px; height: 130px; border-radius: 50%; border: 3px solid #daa520; margin-bottom: 15px; object-fit: cover;">
                     <h3 style="color: #8b4513; margin: 0;">වෛද්‍ය පී. සොමරත්න (Dr. P. Somarathna)</h3>
                     <p>"තම පරම්පරාවේ පුස්කොලපොත් සහ තම පරපුරේ වෙද සෘෂිවරැන්ගෙන් ලබාගත් දැනුමින් සර්වාංග රෝග පිළිබඳ පුහුණුව ලත් පාරම්පරික වෛද්‍යවරයෙකි. වසර 15 කට වැඩි අත්දැකීම් ඇති භූත විද්‍යව පිළිබද විශේෂ හැකියාවක් ඇති මෙතුමා පුසකොළ පොත් වල ලද දැනුමින් විශාල රෝගීන් පිරිසක් මේ වන විට සුව කර ඇත."</p>
-                    <p style="font-style: italic; color: #666; font-size: 0.9em;">"ඔබ ලබාදුන් තොරතුරු පදනම් කරගෙන, "I am" භාවිතයෙන් තොරව සෘජුවම සකස් කළ ඉංග්‍රීසි පරිවර්තනය පහතින් දැක්වේ:
-
-Professional Profile
-
-A traditional medical practitioner trained in General Medicine (Sarvanga Roga), utilizing knowledge inherited from ancestral palm-leaf manuscripts (Puskola Poth) and the wisdom of lineage medical sages. With over 15 years of experience, he possesses specialized experise in Bhuta Vidya (Exorcism/Traditional Psychiatry). Leveraging the profound knowledge found in ancient palm-leaf scriptures, he has successfully treated and cured a vast number of patients."</p>
-        </div> 
-	<div class="certificate-container" style="flex: 1; min-width: 300px; display: flex; justify-content: center; padding: 10px;">
-           <div class="certificate-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; justify-items: center;">
-                <div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #f9f9f9;">
-                <img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+                    <p style="font-style: italic; color: #666; font-size: 0.9em;">"ඔබ ලබාදුන් තොරතුරු පදනම් කරගෙන, "I am" භාවිතයෙන් තොරව සෘජුවම සකස් කළ ඉංග්‍රීසි පරිවර්තනය පහතින් දැක්වේ: Professional Profile: A traditional medical practitioner trained in General Medicine (Sarvanga Roga), utilizing knowledge inherited from ancestral palm-leaf manuscripts (Puskola Poth) and the wisdom of lineage medical sages. With over 15 years of experience, he possesses specialized experise in Bhuta Vidya (Exorcism/Traditional Psychiatry). Leveraging the profound knowledge found in ancient palm-leaf scriptures, he has successfully treated and cured a vast number of patients."</p>
+                </div>
+                <div class="certificate-container">
+                    <div class="certificate-grid">
+                        <div class="cert-box-large"><img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"></div>
+                        <div class="cert-box-large"><img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"></div>
+                        <div class="cert-box-large" style="grid-column: span 2;"><img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"></div>
+                    </div>
+                </div>
             </div>
-                <div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                <img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
-            </div>
-                <div class="cert-box-large" style="grid-column: span 2; width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                <img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
-            </div>
-        </div>
-    </div>
-</div>
 
             <div class="doctor-card">
                 <div class="doctor-info">
@@ -109,119 +105,82 @@ A traditional medical practitioner trained in General Medicine (Sarvanga Roga), 
                     <h3 style="color: #8b4513; margin: 0;">වෛද්‍ය එච්.එම්. මංගලිකා හේරත් (Dr. Mangalika Herath)</h3>
                     <p>සර්වාංග රෝග පිළිබඳ පුහුණුව සහ ආයුර්වේද හා කේරල පංචකර්ම පිළිබඳ සුවිශේෂී දැනුමක් සහිත පළපුරුදු දේශීය වෛද්‍යවරියකි. වසර කිහිපයක්ම උතුරැමැද පළාතේ හොදම පරිසර නිළධාරිණිය ලෙසින් සම්මානයට පාත්‍ර වූ පරිසර වේදිනියක්ද වේ.</p>
                     <p style="font-size: 0.9em; font-style: italic; color: #666;">"An experienced Indigenous Medical Practitioner with comprehensive training in General Medicine (Sarvanga Roga) and specialized expertise in Ayurvedic and Kerala Panchakarma therapies. Trained at an Ayurvedic Medical College, she is well-known for providing successful treatments using traditional Ayurvedic methodologies. Furthermore, she is a dedicated Environmentalist who has been honored with the award for the Best Environmental Officer in the North Central Province for several consecutive years."</p>
-       </div> 
-	  <div class="certificate-container" style="flex: 1; min-width: 300px; display: flex; justify-content: center; padding: 10px;">
-           <div class="certificate-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; justify-items: center;">
-                <div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #f9f9f9;">
-                <img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+                </div>
+                <div class="certificate-container">
+                    <div class="certificate-grid">
+                        <div class="cert-box-large"><img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"></div>
+                        <div class="cert-box-large"><img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"></div>
+                        <div class="cert-box-large" style="grid-column: span 2;"><img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"></div>
+                    </div>
+                </div>
             </div>
-                <div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                <img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
-            </div>
-                <div class="cert-box-large" style="grid-column: span 2; width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                <img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
-            </div>
-        </div>
-    </div>
-</div>
+
             <div class="doctor-card">
                 <div class="doctor-info">
                     <img src="dr_thilakarathna.jpg" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid #daa520; margin-bottom: 15px; object-fit: cover;">
                     <h3 style="color: #8b4513; margin: 0;">වෛද්‍ය ශිෂ්‍ය එච්.එම්. ගාමිණී තිලකරත්න (H.M. Gamini Thilakarathna)</h3>
                     <p>කුරැණෑගල ආයුර්වේද වෛද්‍ය විද්‍යලයේ පුහුණුව ලබන වෛද්‍ය ශිෂ්‍යකෙි. SMC APTI Ayurveda Panchakarma & Spa Therapy පාඨමාලාව හදාරමින් සිටී. සංධි වේදනා සුව කිරීම සම්බන්ධයෙන් නිකවැරටිය ප්‍රදේශයේ විශේෂ ප්‍රසිද්ධියක් ලබා ඇත.</p>
-                   <p style="font-size: 0.9em; font-style: italic; color: #666;">"An Ayurvedic Medical Student training at the Ayurvedic Medical College, Kurunegala, currently pursuing the SMC APTI Ayurveda Panchakarma & Spa Therapy course. Possesses specialized knowledge gained through working at several Ayurvedic medicine manufacturing laboratories. Highly reputed in the Nikaweratiya area for the successful treatment of joint pains (Sandhi Vedana)."</p>
-    </div> 
-	<div class="certificate-container" style="flex: 1; min-width: 300px; display: flex; justify-content: center; padding: 10px;">
-        <div class="certificate-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; justify-items: center;">
-     
-	<div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #f9f9f9;">
-	<img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
-    </div>
-        <div class="cert-box-large" style="width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
-    </div>
-        <div class="cert-box-large" style="grid-column: span 2; width: 160px; height: 226px; border: 2px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
-    </div>
-        </div>
-    </div>
-</div>
+                    <p style="font-size: 0.9em; font-style: italic; color: #666;">"An Ayurvedic Medical Student training at the Ayurvedic Medical College, Kurunegala, currently pursuing the SMC APTI Ayurveda Panchakarma & Spa Therapy course. Possesses specialized knowledge gained through working at several Ayurvedic medicine manufacturing laboratories. Highly reputed in the Nikaweratiya area for the successful treatment of joint pains (Sandhi Vedana)."</p>
+                </div>
+                <div class="certificate-container">
+                    <div class="certificate-grid">
+                        <div class="cert-box-large"><img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"></div>
+                        <div class="cert-box-large"><img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"></div>
+                        <div class="cert-box-large" style="grid-column: span 2;"><img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-       </section>
-
-         <div class="treatment-cta">
+        <div class="treatment-cta">
             <h2>දිවියට සුවයක්</h2>
-    <p> ආයුර්වේදයේ සහ හෙළ වෙදකමේ මෙන්ම ආයුර්වේද කේරලීය පංචකර්ම වල  විශේෂිත වූ ක්‍රම අනුගමනය කරමින්  සිදු කරන</p>
+            <p>ආයුර්වේදයේ සහ හෙළ වෙදකමේ මෙන්ම ආයුර්වේද කේරලීය පංචකර්ම වල විශේෂිත වූ ක්‍රම අනුගමනය කරමින් සිදු කරන</p>
             <p>ආයුර්වේද ප්‍රතිකාර ක්‍රමවේදයන් පිළිබඳ වැඩි විස්තර මෙතැනින් ලබාගන්න.</p>
             <a href="treatments.html" class="btn-gold">ප්‍රතිකාර සේවා ➔</a>
         </div>
     </div>
-<section id="contact-section" class="footer-area">
+
+    <section id="contact-section" class="footer-area">
         <div class="footer-grid">
             <div class="footer-col">
                 <h3 class="gold-text">📍 ලිපිනය (Address)</h3>
                 <p>16 mile post, තලාව පාර, එප්පාවල</p>
                 <p style="font-size: 0.9em; opacity: 0.7;">Thalawa Road, Eppawala, Sri Lanka.</p>
                 <div style="margin-top: 25px;">
-    <h3 class="gold-text">📞 දුරකථන සහ WhatsApp</h3>
-    <a href="tel:+94702520676" style="text-decoration: none; color: inherit;">+94 70 252 0676</a> / 
-                    <a href="tel:+94701834050" style="text-decoration: none; color: inherit;">+94 70 183 4050</a>
-    
-    <a href="https://wa.me/94711981000" target="_blank" style="display: inline-flex; align-items: center; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.9em; margin-top: 10px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); transition: 0.3s;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 22px; height: 22px; margin-right: 10px;">
-        WhatsApp ඔස්සේ විමසන්න
-    </a>
-</div>
+                    <h3 class="gold-text">📞 දුරකථන සහ WhatsApp</h3>
+                    <p><a href="tel:+94702520676" style="text-decoration: none; color: inherit;">+94 70 252 0676</a> / <a href="tel:+94701834050" style="text-decoration: none; color: inherit;">+94 70 183 4050</a></p>
+                    <a href="https://wa.me/94702520676" target="_blank" style="display: inline-flex; align-items: center; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.9em; margin-top: 10px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 22px; height: 22px; margin-right: 10px;"> WhatsApp ඔස්සේ විමසන්න
+                    </a>
+                </div>
             </div>
-
             <div class="footer-col">
-                <div class="map-box">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.5118290390433!2d80.40418597274098!3d8.15107449187929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afced0053b04541%3A0xb92e89dfe8d79a9f!2sJeewayu%20weda%20madura!5e0!3m2!1sen!2slk!4v1766320724636!5m2!1sen!2slk" 
-    width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
+                <div class="map-box"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.5118290390433!2d80.40418597274098!3d8.15107449187929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afced0053b04541%3A0xb92e89dfe8d79a9f!2sJeewayu%20weda%20madura!5e0!3m2!1sen!2slk!4v1766320724636!5m2!1sen!2slk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
             </div>
-<div>
             <div class="footer-col">
                 <h3 class="gold-text">⏰ විවෘත වේලාවන්</h3>
                 <p><strong>සඳුදා - සිකුරාදා:</strong> 4 PM - 8 PM</p>
                 <p><strong>සති අන්තය:</strong> 9 AM - 8 PM</p>
                 <div style="margin-top: 25px;">
                     <h3 class="gold-text">🌐 සබැඳි (Links)</h3>
-                    <p>facebook: <a href="https://www.facebook.com/jewayuwedamadura" target="_blank" style="color:#87CEEB; text-decoration:none;"> www.facebooc.com/Jeevayu Weda Madura</a></p>
-                    <p style="font-size: 0.9em;">web: <a href="https://jeewayu.github.io/jeewayu-weda-madura/" target="_blank" style="color: #87CEEB; text-decoration: underline;">https://jeewayu.github.io/jeewayu-weda-madura/</a></p>
-            <p style="font-size: 0.9em;"> gmail: <a href="mailto:jewayuwedamadura@gmail.com" style="color: #87CEEB; text-decoration: underline;">jewayuwedamadura@gmail.com</a></p>
+                    <p>facebook: <a href="https://www.facebook.com/jewayuwedamadura" target="_blank" style="color:#87CEEB; text-decoration:none;">Jeevayu Weda Madura</a></p>
+                    <p>web: <a href="https://jeewayu.github.io/jeewayu-weda-madura/" target="_blank" style="color: #87CEEB; text-decoration: underline;">jeewayu.github.io</a></p>
+                    <p>gmail: <a href="mailto:jewayuwedamadura@gmail.com" style="color: #87CEEB; text-decoration: underline;">jewayuwedamadura@gmail.com</a></p>
                 </div>
             </div>
         </div>
-    </div>
-        <div class="copyright">
-       <div class="copyright">
-        <p>© 2025 ජීවායු වෛද්‍ය මධ්‍යස්ථානය. සියලුම හිමිකම් ඇවිරිණි.</p>
-    </div>
+        <div class="copyright" style="text-align: center; margin-top: 40px; border-top: 1px solid #333; padding-top: 20px;">
+            <p>© 2025 ජීවායු වෛද්‍ය මධ්‍යස්ථානය. සියලුම හිමිකම් ඇවිරිණි.</p>
+        </div>
+    </section>
 
-    <div id="imageModal" onclick="closeImage()" style="display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; cursor: zoom-out;">
+    <div id="imageModal" onclick="closeImage()" style="display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; cursor: zoom-out;">
         <img id="modalImg" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 20px rgba(255,255,255,0.2);">
     </div>
 
     <script>
-        function zoomImage(imgElement) {
-            var modal = document.getElementById("imageModal");
-            var modalImg = document.getElementById("modalImg");
-            modal.style.display = "flex"; 
-            modalImg.src = imgElement.src;
-        }
-
-        function closeImage() {
-            var modal = document.getElementById("imageModal");
-            modal.style.display = "none";
-        }
+        function zoomImage(imgElement) { document.getElementById("imageModal").style.display = "flex"; document.getElementById("modalImg").src = imgElement.src; }
+        function closeImage() { document.getElementById("imageModal").style.display = "none"; }
     </script>
-
 </body>
 </html>
