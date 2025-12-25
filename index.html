@@ -79,14 +79,42 @@
         #imageModal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; cursor: zoom-out; }
         #modalImg { max-width: 90%; max-height: 90%; border-radius: 10px; }
 
-        /* Responsive Mobile Adjustments */
         @media (max-width: 768px) {
             header { padding: 40px 10px; }
             .slider-container { height: 200px; }
-            .doctor-card { flex-direction: column; align-items: center; text-align: center; }
-            .doctor-info { padding-right: 0; }
-            .certificate-grid { grid-template-columns: repeat(2, 1fr); }
+            
             h2 { font-size: 1.5em; }
+
+            /* Doctor Card ෆෝන් එකට ගැලපෙන සේ සකස් කිරීම */
+            .doctor-card { 
+                flex-direction: column; 
+                align-items: center; 
+                text-align: center; 
+                padding: 25px 15px !important; /* ඇතුළත ඉඩ වැඩි කළා */
+                width: calc(100% - 30px) !important; /* දෙපැත්තෙන් ඉඩ තැබුවා */
+                margin: 15px auto !important;
+            }
+
+            /* අකුරු කැපීම වැළැක්වීමට මැදට ගැනීම */
+            .doctor-info p { 
+                text-align: center !important; 
+                font-size: 0.95em !important;
+                padding: 0 10px;
+                line-height: 1.6;
+            }
+
+            /* සහතික පත්‍ර grid එක ෆෝන් එකේ මැදට ගැනීම */
+            .certificate-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                justify-content: center;
+                max-width: 240px;
+                margin: 20px auto 0;
+            }
+            
+            .doctor-info img { 
+                width: 110px; 
+                height: 110px; 
+            }
         }
     </style>
 </head>
@@ -151,51 +179,53 @@
 
        <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
 
-   <div class="doctor-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px 25px; margin: 15px auto; border-radius: 15px; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid var(--primary); width: calc(100% - 40px); box-sizing: border-box; overflow: hidden;">
-    <div class="doctor-info" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
-        <img src="dr_somarathna.jpg" alt="Dr. Somarathna" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); margin-bottom: 15px;">
-        <h3 style="color: #8b4513; font-size: 1.25em; margin: 0 auto 10px; width: 100%;">වෛද්‍ය පී. සොමරත්න (Dr. P. Somarathna)</h3>
-        <p style="margin-top: 10px; line-height: 1.6; text-align: justify; font-size: 0.95em; width: 100%;">තම පරම්පරාවේ පුස්කොලපොත් සහ තම පරපුරේ වෙද සෘෂිවරැන්ගෙන් ලබාගත් දැනුමින් සර්වාංග රෝග පිළිබඳ පුහුණුව ලත් පාරම්පරික වෛද්‍යවරයෙකි. වසර 15 කට වැඩි අත්දැකීම් ඇති භූත විද්‍යව පිළිබද විශේෂ හැකියාවක් ඇති මෙතුමා පුසකොළ පොත් වල ලද දැනුමින් විශාල රෝගීන් පිරිසක් මේ වන විට සුව කර ඇත.</p>
-    </div> 
-    <div class="certificate-container" style="width: 100%; display: flex; justify-content: center; margin-top: 20px;">       
-        <div class="certificate-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; width: 100%; max-width: 240px;">
-            <div class="cert-box-large" style="width: 100%; aspect-ratio: 3/4; border: 2px solid #eee; border-radius: 10px; overflow: hidden;"><img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover;"></div>
-            <div class="cert-box-large" style="width: 100%; aspect-ratio: 3/4; border: 2px solid #eee; border-radius: 10px; overflow: hidden;"><img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover;"></div>
-            <div class="cert-box-large" style="grid-column: span 2; width: 110px; margin: 0 auto; aspect-ratio: 3/4; border: 2px solid #eee; border-radius: 10px; overflow: hidden;"><img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover;"></div>
+   <div class="doctor-card">
+    <div class="doctor-info">
+        <img src="dr_somarathna.jpg" alt="Dr. Somarathna">
+        <h3>වෛද්‍ය පී. සොමරත්න<br>(Dr. P. Somarathna)</h3>
+        <p>තම පරම්පරාවේ පුස්කොලපොත් සහ තම පරපුරේ වෙද සෘෂිවරැන්ගෙන් ලබාගත් දැනුමින් සර්වාංග රෝග පිළිබඳ පුහුණුව ලත් පාරම්පරික වෛද්‍යවරයෙකි. වසර 15 කට වැඩි අත්දැකීම් ඇති භූත විද්‍යව පිළිබද විශේෂ හැකියාවක් ඇති මෙතුමා පුසකොළ පොත් වල ලද දැනුමින් විශාල රෝගීන් පිරිසක් මේ වන විට සුව කර ඇත.</p>
+        <p style="font-style: italic; color: #666; font-size: 0.9em; margin-top: 10px;">A traditional medical practitioner trained in General Medicine, utilizing knowledge inherited from ancestral palm-leaf manuscripts and the wisdom of lineage medical sages. With over 15 years of experience, he is particularly skilled in occult sciences and has successfully treated many patients using traditional wisdom.</p>
+    </div>
+    <div class="certificate-container">
+        <div class="certificate-grid">
+            <div class="cert-box-large"><img src="cert1.jpg" onclick="zoomImage(this)"></div>
+            <div class="cert-box-large"><img src="cert2.jpg" onclick="zoomImage(this)"></div>
+            <div class="cert-box-large cert-span-center"><img src="cert3.jpg" onclick="zoomImage(this)"></div>
         </div>
     </div>
 </div>
 
-<div class="doctor-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px 25px; margin: 15px auto; border-radius: 15px; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid var(--primary); width: calc(100% - 40px); box-sizing: border-box; overflow: hidden;">
-    <div class="doctor-info" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
-        <img src="dr_mangalikherath.jpg" alt="Dr. Mangalika Herath" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); margin-bottom: 15px;">
-        <h3 style="color: #8b4513; font-size: 1.25em; margin: 0 auto 10px; width: 100%;">වෛද්‍ය එච්.එම්. මංගලිකා හේරත් (Dr. Mangalika Herath)</h3>
-        <p style="margin-top: 10px; line-height: 1.6; text-align: justify; font-size: 0.95em; width: 100%;">සර්වාංග රෝග පිළිබඳ පුහුණුව සහ ආයුර්වේද හා කේරල පංචකර්ම පිළිබඳ සුවිශේෂී දැනුමක් සහිත පළපුරුදු දේශීය වෛද්‍යවරියකි. වසර කිහිපයක්ම උතුරැමැද පළාතේ හොදම පරිසර නිළධාරිණිය ලෙසින් සම්මානයට පාත්‍ර වූ පරිසර වේදිනියක්ද වේ.</p>
-    </div> 
-    <div class="certificate-container" style="width: 100%; display: flex; justify-content: center; margin-top: 20px;">       
-        <div class="certificate-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; width: 100%; max-width: 240px;">
-            <div class="cert-box-large" style="width: 100%; aspect-ratio: 3/4; border: 2px solid #eee; border-radius: 10px; overflow: hidden;"><img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover;"></div>
-            <div class="cert-box-large" style="width: 100%; aspect-ratio: 3/4; border: 2px solid #eee; border-radius: 10px; overflow: hidden;"><img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover;"></div>
-            <div class="cert-box-large" style="grid-column: span 2; width: 110px; margin: 0 auto; aspect-ratio: 3/4; border: 2px solid #eee; border-radius: 10px; overflow: hidden;"><img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover;"></div>
+<div class="doctor-card">
+    <div class="doctor-info">
+        <img src="dr_mangalikherath.jpg" alt="Dr. Mangalika Herath">
+        <h3>වෛද්‍ය එච්.එම්. මංගලිකා හේරත්<br>(Dr. Mangalika Herath)</h3>
+        <p>සර්වාංග රෝග පිළිබඳ පුහුණුව සහ ආයුර්වේද හා කේරල පංචකර්ම පිළිබඳ සුවිශේෂී දැනුමක් සහිත පළපුරුදු දේශීය වෛද්‍යවරියකි. වසර කිහිපයක්ම උතුරැමැද පළාතේ හොදම පරිසර නිළධාරිණිය ලෙසින් සම්මානයට පාත්‍ර වූ පරිසර වේදිනියක්ද වේ.</p>
+        <p style="font-style: italic; color: #666; font-size: 0.9em; margin-top: 10px;">An experienced Indigenous Medical Practitioner with comprehensive training in General Medicine and specialized expertise in Ayurvedic and Kerala Panchakarma therapies. She is also a recognized environmentalist, awarded as the Best Environmental Officer in the North Central Province for several years.</p>
+    </div>
+    <div class="certificate-container">
+        <div class="certificate-grid">
+            <div class="cert-box-large"><img src="cert1.jpg" onclick="zoomImage(this)"></div>
+            <div class="cert-box-large"><img src="cert2.jpg" onclick="zoomImage(this)"></div>
+            <div class="cert-box-large cert-span-center"><img src="cert3.jpg" onclick="zoomImage(this)"></div>
         </div>
     </div>
 </div>
 
-<div class="doctor-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px 25px; margin: 15px auto; border-radius: 15px; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid var(--primary); width: calc(100% - 40px); box-sizing: border-box; overflow: hidden;">
-    <div class="doctor-info" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
-        <img src="dr_thilakarathna.jpg" alt="Dr. Gamini Thilakarathna" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); margin-bottom: 15px;">
-        <h3 style="color: #8b4513; font-size: 1.25em; margin: 0 auto 10px; width: 100%;">වෛද්‍ය ශිෂ්‍ය එච්.එම්. ගාමිණී තිලකරත්න (H.M. Gamini Thilakarathna)</h3>
-        <p style="margin-top: 10px; line-height: 1.6; text-align: justify; font-size: 0.95em; width: 100%;">කුරැණෑගල ආයුර්වේද වෛද්‍ය විද්‍යලයේ පුහුණුව ලබන වෛද්‍ය ශිෂ්‍යකෙි. SMC APTI Ayurveda Panchakarma & Spa Therapy පාඨමාලාව හදාරමින් සිටී. සංධි වේදනා සුව කිරීම සම්බන්ධයෙන් නිකවැරටිය ප්‍රදේශයේ විශේෂ ප්‍රසිද්ධියක් ලබා ඇත.</p>
-    </div> 
-    <div class="certificate-container" style="width: 100%; display: flex; justify-content: center; margin-top: 20px;">       
-        <div class="certificate-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; width: 100%; max-width: 240px;">
-            <div class="cert-box-large" style="width: 100%; aspect-ratio: 3/4; border: 2px solid #eee; border-radius: 10px; overflow: hidden;"><img src="cert1.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover;"></div>
-            <div class="cert-box-large" style="width: 100%; aspect-ratio: 3/4; border: 2px solid #eee; border-radius: 10px; overflow: hidden;"><img src="cert2.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover;"></div>
-            <div class="cert-box-large" style="grid-column: span 2; width: 110px; margin: 0 auto; aspect-ratio: 3/4; border: 2px solid #eee; border-radius: 10px; overflow: hidden;"><img src="cert3.jpg" onclick="zoomImage(this)" style="width: 100%; height: 100%; object-fit: cover;"></div>
+<div class="doctor-card">
+    <div class="doctor-info">
+        <img src="dr_thilakarathna.jpg" alt="H.M. Gamini Thilakarathna">
+        <h3>වෛද්‍ය ශිෂ්‍ය එච්.එම්. ගාමිණී තිලකරත්න<br>(H.M. Gamini Thilakarathna)</h3>
+        <p>කුරැණෑගල ආයුර්වේද වෛද්‍ය විද්‍යලයේ පුහුණුව ලබන වෛද්‍ය ශිෂ්‍යකෙි. SMC APTI Ayurveda Panchakarma & Spa Therapy පාඨමාලාව හදාරමින් සිටී. සංධි වේදනා සුව කිරීම සම්බන්ධයෙන් නිකවැරටිය ප්‍රදේශයේ විශේෂ ප්‍රසිද්ධියක් ලබා ඇත.</p>
+        <p style="font-style: italic; color: #666; font-size: 0.9em; margin-top: 10px;">A dedicated medical student training at the Ayurvedic Medical College, Kurunegala, currently pursuing the SMC APTI Ayurveda Panchakarma & Spa Therapy course. He is well-known in the Nikaweratiya area for his expertise in treating joint pains.</p>
+    </div>
+    <div class="certificate-container">
+        <div class="certificate-grid">
+            <div class="cert-box-large"><img src="cert1.jpg" onclick="zoomImage(this)"></div>
+            <div class="cert-box-large"><img src="cert2.jpg" onclick="zoomImage(this)"></div>
+            <div class="cert-box-large cert-span-center"><img src="cert3.jpg" onclick="zoomImage(this)"></div>
         </div>
     </div>
 </div>
-
         </section>
 
        <div class="treatment-cta">
